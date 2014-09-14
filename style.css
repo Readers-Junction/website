@@ -182,18 +182,16 @@ text-decoration: none;
 			/* SLIDER START */
 
 #slider { 
-	background: url(images/slider_bg2.png) repeat; 
 	max-width: 900px;
 	max-height:600px;
     padding: 0 20px 40px 20px;
     margin: auto;
 	position: relative; 
 	z-index: 10;
-	color: #ffffff
+	color: #ff0000
 }
 
 #slider .jcarousel-container { 
-	background: url(images/slider_bg2.png) repeat; 
 	width: 857px;
 	height:310px;
 	padding: 36px 14px 20px 13px; }
