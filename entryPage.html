@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Entry Page</title>
+	<link rel="stylesheet" type="text/css" href="entry.css" />
+	<link rel="javascript" type="text/javascript" href="js/submission_validation.js" />
+	<script src="js/submission_validation.js"></script>
+</head>
+<body>
+	<div id="maindiv">
+		<form id= "form1" method="POST" style="text-align:center;" action="process.php">
+			<table style = "text-align:center ; margin : 25px auto 0 auto ;" cellspacing = "12px">
+			<p><span id="errorMessage" style="font-size:25px ; color: red ; font-weight: bold"></span></p>
+				<tr>
+					<td align="right"><b>Book ID : </b></td>
+					<td align="left"><input id="bookid" type = "number" name="bookid" style="width:200px"/></td>
+				</tr>
+				
+				<tr>
+					<td align="right"><b>Book Name: </b></td>
+					<td align="left"><input id="name" type = "text" name="name" style="width:200px"/></td>
+				</tr>
+				<tr>
+					<td align="right"><b>Author: </b></td>
+					<td align="left"><input type="text" name="author" id="author" style="width:200px ;"/> </td>	
+				</tr>	
+				<tr>
+					<td align="right"><b>Pages : </b></td>
+					<td align="left"><input type="number" name="pages" id="pages" style="width:200px ;"/> </td>	
+				</tr>
+				<tr>
+					<td align="right"><b>Rating: </b></td>
+					<td align="left"><input type="number" step="any" name="rating" id="rating" style="width:200px ;"/> </td>	
+				</tr>
+				<tr>
+					<td align="right"><b>MRP : </b></td>
+					<td align="left"><input id="mrp" type = "number" name="mrp" style="width:200px"/></td>
+				</tr>
+				<tr>
+					<td align="right"><b>Rent : </b></td>
+					<td align="left"><input id="rent" type = "number" name="rent" style="width:200px"/></td>
+				</tr>
+				<tr>  
+				<td align = "right">
+				<b> Tags: </b>
+				</td>
+				<td align="left">
+					<input type="checkbox" name="tags[]" value="biogbooks">Biography &nbsp &nbsp &nbsp &nbsp &nbsp
+					<input type="checkbox" name="tags[]" value="childrenbooks">Children's &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+					<input type="checkbox" name="tags[]" value="classicbooks">Classics <br>
+					<input type="checkbox" name="tags[]" value="comicbooks">Comics &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+					<input type="checkbox" name="tags[]" value="crimebooks">Crime &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp
+					<input type="checkbox" name="tags[]" value="fictionbooks">Fiction <br>
+					<input type="checkbox" name="tags[]" value="horrorbooks">Horror &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+					<input type="checkbox" name="tags[]" value="humorbooks">Humor And Comedy &nbsp &nbsp
+					<input type="checkbox" name="tags[]" value="nonfictionbooks">Non Fiction <br>
+					<input type="checkbox" name="tags[]" value="philosophybooks">Philosophy &nbsp &nbsp &nbsp &nbsp &nbsp
+					<input type="checkbox" name="tags[]" value="religionbooks">Religion &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+					<input type="checkbox" name="tags[]" value="romancebooks">Romance <br>
+					<input type="checkbox" name="tags[]" value="sciencefictionbooks">Science Fiction &nbsp &nbsp
+					<input type="checkbox" name="tags[]" value="selfhelpbooks">Self Help &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+					<input type="checkbox" name="tags[]" value="suspensebooks">Suspense <br>
+					<input type="checkbox" name="tags[]" value="spiritualitybooks">Spirituality &nbsp &nbsp &nbsp &nbsp &nbsp
+					<input type="checkbox" name="tags[]" value="thrillerbooks">Thriller &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+					<input type="checkbox" name="tags[]" value="travelbooks">Travel <br>
+			</select>
+				</td>
+				</tr>
+			</table>	
+			<input type="submit" name="submit" value="Submit" onSubmit = ""/>
+		</form>
+		<div class="clear"></div>
+	</div>
+	<form method="POST" action="index.html" style="text-align:center ">
+	<br>
+	<input type="submit" style="font-size: 20px; " value="HOME">
+	</form>
+	<!-- <script type="text/javascript" src="fields.js"></script>
+	<link rel="javascript" type="text/javascript" href="fields.js" /><br> -->
+	<link rel="javascript" type="text/javascript" href="submission_validation.js" />
+	<script src="submission_validation.js"></script>

@@ -1,0 +1,32 @@
+
+#maindiv{
+    margin: 0 auto ;
+    margin: 25px auto 0 auto ;
+}
+	
+
+body
+{
+	width: 100%;
+    font-size: 12pt;
+    color: #00000F;    
+    font-family: "Arial", sans-serif,Tahoma,Verdana;
+	background-image:url(images/background.JPG);
+}
+
+tr
+{
+    FONT-SIZE: 10pt;
+    COLOR: #003366;
+    FONT-FAMILY: "Arial", sans-serif,Tahoma,Verdana
+}
+
+td
+{
+    color: black;
+}
+#form1 {
+    background-color: #ebebeb;
+    margin: -20px 29.28% 15px 29.28%;
+    border: 2px solid black ;
+}
