@@ -3,7 +3,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Readers' Junction | Rent Books and Magazines | Home</title>
-<link href="style.css" rel="stylesheet" type="text/css" />
+<link href="common.css" rel="stylesheet" type="text/css" />
+<link href="index.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="books.css" type="text/css" />
 <link rel="stylesheet" type="text/css" href="social.css" />
 <link rel="stylesheet" href="jquery.cluetip.css" type="text/css" />
 
@@ -133,83 +135,88 @@
         
         <div id="main_content_right">
 		
-		<div id="mostPopular" class="mostPopular">
-		<h1>Most Popular</h1>
+			<div id="mostPopular" class="mostPopular">
+				<h1>Most Popular</h1>
+					
+					<ul>
+						<li><img src="images/17212231.jpg" alt="" width="100" /><br>Inferno <br>by Dan Brown</li>
+						<li><img src="images/templatemo_image_01.jpg" alt="" width="100" /><br>Photography <br> by Author 1</li>
+						<li><img src="images/templatemo_image_02.jpg" alt="" width="100" /><br>Cooking <br> by Author 2</li>
+						<li><img src="images/templatemo_image_03.jpg" alt="" width="100" /><br>Gardening <br> by Author 3</li>
+						<li><img src="images/templatemo_image_04.jpg" alt="" width="100" /><br>Sushi <br> by Author 4</li>
+					</ul>
+					
+					<a href="#" class="prev"><<</a>
+					<a href="#" class="next">>></a>
+			</div>		
+		
+			<div id="topRated" class="topRated">
+				<br><br><h1>Top Rated</h1>
 			
-			<ul>
-
-  <!-- use title attribute for clueTip contents, but don't include anything in the clueTip's heading -->
-  <p><a id="houdini" href="#" title="|Houdini was an escape artist.|He was also adept at prestidigitation.">Houdini
-				<li><img src="images/17212231.jpg" alt="" width="100" ><br>Inferno <br>by Dan Brown</li></a></p>
-				<li><img src="images/templatemo_image_01.jpg" alt="" width="100" ><br>Photography <br> by Author 1</li>
-				<li><img src="images/templatemo_image_02.jpg" alt="" width="100" ><br>Cooking <br> by Author 2</li>
-				<li><img src="images/templatemo_image_03.jpg" alt="" width="100" ><br>Gardening <br> by Author 3</li>
-				<li><img src="images/templatemo_image_04.jpg" alt="" width="100" ><br>Sushi <br> by Author 4</li>
-			</ul>
-				<a href="#" class="prev"><<</a>
-				<a href="#" class="next">>></a>
-		</div>		
-		
-		<div id="topRated" class="topRated">
-		<br><br><h1>Top Rated</h1>
-		
-			<ul>
-				<li><img src="images/17212231.jpg" alt="" width="100" ><br>Inferno <br> by Dan Brown</li>
-				<li><img src="images/templatemo_image_01.jpg" alt="" width="100" ><br>Photography <br> by Author 1</li>
-				<li><img src="images/templatemo_image_02.jpg" alt="" width="100" ><br>Cooking <br> by Author 2</li>
-				<li><img src="images/templatemo_image_03.jpg" alt="" width="100" ><br>Gardening <br> by Author 3</li>
-				<li><img src="images/templatemo_image_04.jpg" alt="" width="100" ><br>Sushi <br> by Author 4</li>
-			</ul>
-			<a href="#" class="prev2"><<</a>
-			<a href="#" class="next2">>></a>
-		</div>		
+					<ul>
+						<li><img src="images/17212231.jpg" alt="" width="100" ><br>Inferno <br> by Dan Brown</li>
+						<li><img src="images/templatemo_image_01.jpg" alt="" width="100" ><br>Photography <br> by Author 1</li>
+						<li><img src="images/templatemo_image_02.jpg" alt="" width="100" ><br>Cooking <br> by Author 2</li>
+						<li><img src="images/templatemo_image_03.jpg" alt="" width="100" ><br>Gardening <br> by Author 3</li>
+						<li><img src="images/templatemo_image_04.jpg" alt="" width="100" ><br>Sushi <br> by Author 4</li>
+					</ul>
+				<a href="#" class="prev2"><<</a>
+				<a href="#" class="next2">>></a>
+			</div>		
         
-			<br><div id="categories">
-			<h1>Top Books Categories</h1>
-			<ul>
-				<li><img src="images/childrenBooks.jpg" alt="" width="100" ></li>
-				<li><img src="images/comicBooks.jpg" alt="" width="100" ></li>
-				<li><img src="images/historyBooks.jpg" alt="" width="100" ></li>
-			</ul>
-			<ul>
-				<li><h2>Children</h2></li>
-				<li><h2>Comics</h2></li>
-				<li><h2>History</h2></li>
-			</ul>
-			<ul>
-				<br>
-				<li><img src="images/religionBooks.jpg" alt="" width="100" ></li>
-				<li><img src="images/thrillerBooks.jpg" alt="" width="100" ></li>
-				<li><img src="images/spiritualityBooks.jpg" alt="" width="100" ></li>
-			</ul>
-			<ul>
-			<li><h2>Religion</h2></li>
-			<li><h2>Thriller</h2></li>
-			<li><h2>Spirituality</h2></li>
-			</ul>
+				<h1>Top Books Categories</h1>
+				<div class="bookCategories">
+			<ul class="categories-list books row-3-thumbs">
+			<li class="cat_pic" data-category="1">
+				<div>
+					<a href="#"><img src="images/categories/1.jpg" width = 100px alt="Art" /></a>
+						<h5>
+							<a href="#"><strong>Art</strong></a>
+						</h5>
+				</div>
+			</li>
+			<li class="cat_pic" data-category="2">
+				<div>
+					<a href="#"><img src="images/categories/2.jpg" width = 100px alt="Biography" /></a>
+						<h5>
+							<a href="#"><strong>Biography</strong></a>
+						</h5>
+				</div>
+			</li><li class="cat_pic" data-category="1">
+				<div>
+					<a href="#"><img src="images/categories/1.jpg" width = 100px alt="Art" /></a>
+						<h5>
+							<a href="#"><strong>Art</strong></a>
+						</h5>
+				</div>
+			</li>
+			<li class="cat_pic" data-category="2">
+				<div>
+					<a href="#"><img src="images/categories/2.jpg" width = 100px alt="Biography" /></a>
+						<h5>
+							<a href="#"><strong>Biography</strong></a>
+						</h5>
+				</div>
+			</li><li class="cat_pic" data-category="1">
+				<div>
+					<a href="#"><img src="images/categories/1.jpg" width = 100px alt="Art" /></a>
+						<h5>
+							<a href="#"><strong>Art</strong></a>
+						</h5>
+				</div>
+			</li>
+			<li class="cat_pic" data-category="2">
+				<div>
+					<a href="#"><img src="images/categories/2.jpg" width = 100px alt="Biography" /></a>
+						<h5>
+							<a href="#"><strong>Biography</strong></a>
+						</h5>
+				</div>
+			</li>
+		
+	</div>
 			<br>
-			<h1>Top Magazines Categories</h1>
-			<ul>
-				<li><img src="images/childrenBooks.jpg" alt="" width="100" ></li>
-				<li><img src="images/comicBooks.jpg" alt="" width="100" ></li>
-				<li><img src="images/historyBooks.jpg" alt="" width="100" ></li>
-			</ul>
-			<ul>
-				<li><h2>Children</h2></li>
-				<li><h2>Comics</h2></li>
-				<li><h2>History</h2></li>
-			</ul>
-			<ul>
-				<br>
-				<li><img src="images/religionBooks.jpg" alt="" width="100" ></li>
-				<li><img src="images/thrillerBooks.jpg" alt="" width="100" ></li>
-				<li><img src="images/spiritualityBooks.jpg" alt="" width="100" ></li>
-			</ul>
-			<ul>
-			<li><h2>Religion</h2></li>
-			<li><h2>Thriller</h2></li>
-			<li><h2>Spirituality</h2></li>
-			</ul>
+				<h1>Top Magazines Categories</h1>
 			</div>
 		</div>	
 		<div class="cleaner_with_height">&nbsp;</div>
@@ -217,9 +224,9 @@
     	
     <div id="footer">
     
-	       <a href="index.html">Home</a> | <a href="books.html">Books</a> | <a href="mags.html">Magazines</a> | <a href="faq.html">FAQs</a> | <a href="contact.html">Contact Us</a><br />
+	   <a href="index.html">Home</a> | <a href="books.html">Books</a> | <a href="mags.html">Magazines</a> | <a href="faq.html">FAQs</a> | <a href="contact.html">Contact Us</a><br />
         Copyright © 2048 <a href="#"><strong>Your Company Name</strong></a>
    
-</div> <!-- end of container -->
+	</div> <!-- end of container -->
 </body>
 </html>
