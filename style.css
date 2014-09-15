@@ -111,52 +111,48 @@ text-decoration: none;
 				/* SEARCH BOX START*/
 
 #search_box{
-    position:absolute;
-	right:10px;
+    position:relative;
 	background-color: #eaf8fc;
     background-image: linear-gradient(#fff, #d4e8ec);
-    border-radius: 35px;    
     border-width: 1px;
     border-style: solid;
     border-color: #c4d9df #a4c3ca #83afb7;            
-    width: 300px;
-    height: 25px;
-    padding: 5px;
-	top: 10px;
-	right: 100px;
+    width: 90%;
+	margin-left:5%;
+	height: 35px;
     overflow: hidden; /* Clear floats */
 }
 
 #search
 
 #submit {
-    float: left;
+    float: right;
 }
 
 #search {
-	padding: 5px 9px;
+	padding:10px 10px 10px 10px;
     height: 13px;
-    width: 175px;
+	margin-left:10px;
+    width: 87%;
 	border: 1px solid #a4c3ca;
     font: normal 13px 'trebuchet MS', arial, helvetica;
     background: #f1f1f1;
-    border-radius: 50px 3px 3px 50px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25) inset, 0 1px 0 rgba(255, 255, 255, 1);            
 }
 
 #submit{       
-    background-color: #6cbb6b;
+    float:right;
+	margin-top:5px;
+	margin-right:5px;
+	background-color: #6cbb6b;
     background-image: linear-gradient(#95d788, #6cbb6b);
-    border-radius: 3px 50px 50px 3px;    
     border-width: 1px;
     border-style: solid;
     border-color: #7eba7c #578e57 #447d43;
     box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 
                 0 1px 0 rgba(255, 255, 255, 0.3) inset;
     height: 25px;
-    margin: 0 0 0 10px;
-    padding: 0;
-    width: 90px;
+    width: 9%;
     cursor: pointer;
     color: #23441e;    
     text-shadow: 0 1px 0 rgba(255,255,255,0.5);
@@ -386,7 +382,7 @@ display:inline;
 
 #main_content_right{
 	padding-top: 40px;
-	max-width:100px;
+	max-width:70%;
 }
 
 #main_content_right a{
@@ -465,14 +461,13 @@ display:inline;
 	top:1px;
 }
 
-
 #main_content_right h1 {
 	padding: 10px;
 	margin: 0 0 20px 0;
 	font-size: 15px;
 	color: #cbc750;
 	background: url(images/content_head_bg.jpg) repeat;
-	width:100%;
+	max-width:500px;
 }
 
 #main_content_right ul {
@@ -484,6 +479,30 @@ display:inline;
 	padding: 10px 40px 10px 40px;
 }
 
+#categories ul {
+	margin: 0 0 20px 0;
+	display:inline;
+}
+
+#categories li  {
+	padding-left:0px;
+	padding-right: 90px;
+	padding-bottom:20px;
+	padding-top:20px;
+	list-style: none;
+	display:inline;
+	position:relative;
+}
+
+#categories h2{
+	font-size:19px;
+	padding-left:30px;
+	padding-top:20px;
+	padding-right:0px;
+	font-family: Georgia;
+	display:inline;
+	position:relative;
+	}
 
 #main_content_right p {
 	text-align: justify;
