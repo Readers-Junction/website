@@ -4,10 +4,16 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Readers' Junction | Rent Books and Magazines | Home</title>
 <link href="style.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="social.css" />
+<link rel="stylesheet" href="jquery.cluetip.css" type="text/css" />
+
 <script type="text/javascript" src="js/jquery-1.6.2.min.js"></script>
 <script type="text/javascript" src="js/jquery.jcarousel.min.js"></script>
-<script type="text/javascript" src="js/functions.js"></script>
 <script type="text/javascript" src="js/jcarousellite_1.0.1.js"></script>
+<script src="js/jquery-ui.min.js" type="text/javascript"></script>
+<script src="js/jquery.cluetip.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+<script src="js/socialbars.js" type="text/javascript"></script>
 <script type="text/javascript" src="js/f2.js"></script>
 </head>
 <body>
@@ -91,7 +97,8 @@
 	</div>
 	<!-- End Slider -->
    	
-		
+	<div id="socialside"></div>
+	
 	<div id="main_content">
     	
         <div id="main_content_left">
@@ -130,7 +137,10 @@
 		<h1>Most Popular</h1>
 			
 			<ul>
-				<li><img src="images/17212231.jpg" alt="" width="100" ><br>Inferno <br>by Dan Brown</li>
+
+  <!-- use title attribute for clueTip contents, but don't include anything in the clueTip's heading -->
+  <p><a id="houdini" href="#" title="|Houdini was an escape artist.|He was also adept at prestidigitation.">Houdini
+				<li><img src="images/17212231.jpg" alt="" width="100" ><br>Inferno <br>by Dan Brown</li></a></p>
 				<li><img src="images/templatemo_image_01.jpg" alt="" width="100" ><br>Photography <br> by Author 1</li>
 				<li><img src="images/templatemo_image_02.jpg" alt="" width="100" ><br>Cooking <br> by Author 2</li>
 				<li><img src="images/templatemo_image_03.jpg" alt="" width="100" ><br>Gardening <br> by Author 3</li>
