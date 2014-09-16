@@ -35,11 +35,11 @@ AFTER Install
 Don't forget to mention the categories you chose to others.
 
 Categories Available
-~~<br>Art
-<br>Biography
-<br>Business
-<br>Children-s
-<br>Classics ~~
+<br>~~Art~~
+<br>~~Biography~~
+<br>~~Business~~
+<br>~~Children-s~~
+<br>~~Classics ~~
 <br>Comics
 <br>Contemporary
 <br>Crime
