@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>thumbs</title>
+<script>
+(function(W){
+ function init(){
+  W.document.getElementById('1').addEventListener('click',sendname,false);
+ }
+ function sendimg(e){
+  var a=e.target;
+  if(a.parentNode.id=='catPics'){
+   W.localStorage['imginfo']=JSON.stringify({src:a.src,id:a.id});
+   W.location.href="img.html";
+  }
+ }
+ W.addEventListener('load',init,false)
+})(window)
+</script>
+</head>
+<body>
+<div id="catPics" class="bookCategories">
+		<ul class="categories-list books row-4-thumbs">
+				<li class="cat_pic" data-category="1" id="1">
+					<div id>
+						<a href="img.html"><img src="images/categories/1.jpg" width = 150px alt="Art" /></a>
+							<h5>
+								<a href="img.html"><strong>Art</strong></a>
+							</h5>
+					</div>
+				</li>
+				<li class="cat_pic" data-category="2">
+					<div>
+						<a href="img.html"><img src="images/categories/2.jpg" width = 150px alt="Biography" /></a>
+							<h5>
+								<a href="img.html"><strong>Biography</strong></a>
+							</h5>
+					</div>
+				</li>
+				</div>
+	</body>
+</html>

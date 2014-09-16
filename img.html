@@ -1,0 +1,17 @@
+<html>
+<head>
+<title>img</title>
+<script>
+window.onload=function(){
+ var img=document.createElement('li');
+ var info=JSON.parse(window.localStorage['imginfo']);
+ delete window.localStorage['imginfo'];
+ img.class=info.class;
+ img.data-category=info.data-category;
+ document.body.appendChild(li);
+}
+</script>
+</head>
+<body>
+</body>
+</html>
