@@ -21,11 +21,11 @@ i=0
 f2 = open('data.txt', 'w')
 
 # Read book names from file Books.txt - NOTE THE CAPITAL B
-with open('C:\Users\Harsh Sharma\Desktop\Books.txt','r') as fid:
+with open('Books.txt','r') as fid:
     for line in fid:
         bookNames.append(line);
         bookNames[i] = bookNames[i].strip()
-        bookNames[i] = bookNames[i][5:].upper() #5 because of the way data in txt file
+        bookNames[i] = bookNames[i][:bookNames[i].index(' by ')].upper() #Because of the way data in txt file
         i+=1
 
 flip='flipkart'
@@ -56,8 +56,6 @@ for i in range(0,len(bookNames)):
     try:
         r  = requests.get(url);
         soup = BeautifulSoup(r.text)
-        pagelink = url[24:url.index('-')]
-        pagelink = pagelink.upper()
         pageTitle = str(soup.title).upper()
     except(requests.exceptions.MissingSchema):
         pageTitle = 'Placeholder Value'
@@ -71,71 +69,79 @@ for i in range(0,len(bookNames)):
         gTitle = 'Placeholder Value'
         bookNames[i]
     
-    if bookNames[i] in pageTitle or pagelink in bookNames[i]:
-        name=bookNames[i]
 
-        try: #If MRP != SP
-            price = str(soup.find('span', class_='price list old-price').text)
-        except(AttributeError): # If MRP = SP
-            price = str(soup.find('span', class_='fk-font-26 pprice fk-bold vmiddle').text)
-
-        price = int(price[price.index('.')+2:])
-        ar1 = soup.findAll('td', class_='specs-value fk-data')
+    name=bookNames[i]
+    try: #If MRP != SP
+        price = str(soup.find('span', class_='price list old-price').text)
+    except(AttributeError): # If MRP = SP
         try:
-            author = str(ar1[0].text) 
-            publisher = str(ar1[1].text)
-            year = int(ar1[2].text)
-            isbn13 = int(ar1[3].text)
-            isbn10 = int(ar1[4].text)
-            language = str(ar1[5].text)
-            pages = str(ar1[7].text)
-            pages = int(pages[0:pages.index(' ')])
-        except(AttributeError):
+            price = str(soup.find('span', class_='fk-font-26 pprice fk-bold vmiddle').text)
+        except:
             pass
-        except(ValueError):
-            author = str(ar1[0].text) 
-            publisher = str(ar1[1].text)
-            year = int(ar1[2].text)
-            isbn13 = int(ar1[3].text)
-            isbn10 = int(ar1[4].text)
-            language = str(ar1[5].text)
+    try:
+        price = int(price[price.index('.')+2:])
+        valueAr = soup.findAll('td', class_='specs-value fk-data')
+        keyAr2 = soup.findAll('td', class_='specs-key')
+        keyAr = []
+        for key in keyAr2:
+            keyAr.append(str(key.text))
+        for z in range(0, len(keyAr)):
+            if(keyAr[z] == 'Authored By' or keyAr[z] == 'Author'):
+                author = str(valueAr[z].text)
+            elif(keyAr[z] == 'Publisher'):
+                publisher = str(valueAr[z].text)
+            elif(keyAr[z] == 'Publication Year'):
+                year = str(valueAr[z].text)
+                year = int(year[0:3])
+            elif(keyAr[z] == 'ISBN-13'):
+                isbn13 = int(valueAr[z].text)
+            elif(keyAr[z] == 'ISBN-10'):
+                isbn10 = str(valueAr[z].text)
+            elif(keyAr[z] == 'Language'):
+                language = str(valueAr[z].text)
+            elif(keyAr[z] == 'Number of Pages'):
+                pages = str(valueAr[z].text)
+                pages = int(pages[0:pages.index(' ')])
             
-        if bookNames[i] in gTitle: #Verify Page Title
-            rating = float(soup2.find('span', class_='average').text)
-            
-            genreArrayLinks = soup2.findAll('a', href=re.compile('/genre/*'))
-            for g in range(1, len(genreArrayLinks)):
-                genreArrayLink = str(genreArrayLinks[g])
-                genreArray.append(genreArrayLink[genreArrayLink.index('>')+1:genreArrayLink.rindex('<')])
-            
-    if(genreArray == [] and name!=''):
-        genreArray.append('Others')
-   
-   # Calculate rent based on slabs
-    if(0<price<=50):
-        rent = 10
-    elif(50<price<=150):
-        rent=20
-    elif(150<=price<=300):
-        rent=40
-    elif(price>300):
-        rent=50
-    for tname in genreArray:
-        while genreArray.count(tname)!=1:
-            genreArray.remove(tname)
     
+        rating = float(soup2.find('span', class_='average').text)
+        
+        genreArrayLinks = soup2.findAll('a', href=re.compile('/genre/*'))
+        for g in range(1, len(genreArrayLinks)):
+            genreArrayLink = str(genreArrayLinks[g])
+            genreArray.append(genreArrayLink[genreArrayLink.index('>')+1:genreArrayLink.rindex('<')])
+        
+        if(genreArray == [] and name!=''):
+            genreArray.append('Others')
+       
+       # Calculate rent based on slabs
+        if(0<price<=50):
+            rent = 10
+        elif(50<price<=150):
+            rent=20
+        elif(150<=price<=300):
+            rent=40
+        elif(price>300):
+            rent=50
+        for tname in genreArray:
+            while genreArray.count(tname)!=1:
+                genreArray.remove(tname)
+    except:
+        pass
+        
     if(author!=''): #Write valid entries only
-        params = [isbn13, isbn10, name, author, pages, language, rating, price, rent, year, publisher, ]
+        params = [isbn13, isbn10, name, author, pages, language, rating, price, rent, year, publisher]
         for d1 in params:
             f2.write(str(d1))
             f2.write('\n')
-        f2.write('++++') #To seperate genres from params
+        f2.write('++++\n') #To seperate genres from params
         
         for d2 in genreArray:
             f2.write(d2)
             f2.write('\n')
             
-        f2.write('========')
+        f2.write('========\n')
+        print bookNames[i], 'written'
     
 f2.close()
 fid.close()
