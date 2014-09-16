@@ -12,8 +12,7 @@ import requests
 #Read book names from a file
 baseURL = 'http://www.goodreads.com/shelf/show/';
 
-#categories = ['Art','Biography','Business','Children-s','Classics','Comics','Contemporary','Crime','Fantasy','Fiction','Historical Fiction','History','Horror','Humor And Comedy','Memoir','Music','Mystery','Non Fiction','Paranormal','Philosophy','Poetry','Psychology','Religion','Romance','Science','Science Fiction','Self Help','Suspense','Spirituality','Sports','Thriller','Travel','Young Adult']
-categories = ['Historical Fiction','Self Help','Spirituality','Sports']
+categories = ['Art','Biography','Business','Children-s','Classics','Comics','Contemporary','Crime','Fantasy','Fiction','Historical Fiction','History','Horror','Humor And Comedy','Memoir','Music','Mystery','Non Fiction','Paranormal','Philosophy','Poetry','Psychology','Religion','Romance','Science','Science Fiction','Self Help','Suspense','Spirituality','Sports','Thriller','Travel','Young Adult']
 for cat in categories:
     fid = open(cat.replace(' ', '')+'books.txt', 'w')
     url = baseURL+cat
@@ -23,23 +22,23 @@ for cat in categories:
     soup = BeautifulSoup(r.text)
     ar1 = soup.findAll('a', class_='bookTitle')
     ar2 = soup.findAll('a', class_='authorName')
-    print url
     
     try:
         for key in ar1:
             t = str(key.text)
             bookNames.append(t[0:t.index('(')-1])
-        for key in ar2:
-            authorNames.append(str(key.text))
     except:
         pass
-    try:
-        for i in range(0, len(bookNames)):
-            fid.write(bookNames[i]+' by '+ authorNames[i])
-            fid.write('\n')
+    try:    
+        for key in ar2:
+                authorNames.append(str(key.text))
     except:
         pass
     
+    for i in range(0, len(bookNames)):
+        fid.write(bookNames[i]+' by '+ authorNames[i])
+        fid.write('\n')
+
     fid.close()
     print cat, ' written'
         

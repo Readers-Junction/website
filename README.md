@@ -20,7 +20,8 @@ Install the following<br>
 <br>6) MySQL-Python - http://www.codegood.com/archives/129
 
 <br>
-To install BeautifulSoup from source open cmd and type
+<b>To install BeautifulSoup from source </b>
+		&nbsp;&nbsp; open cmd and type
 <br>1) Extract zip file contents in C:\Python27 or your installation directory
 <br>2) Open cmd and navigate to C:\Python27
 <br>3) Type 
@@ -29,9 +30,6 @@ To install BeautifulSoup from source open cmd and type
 	
 AFTER Install
 =======
-<br>In order to create files for database entry, we need some data. There are 33 categories and so 33 text files in the books folder. Everyone must select atleast 4 categories and run the script bookDataFile.py (The one present inside the folder and not the other) after the making changes to 'categories' array present in line 21.
+<br>In order to create files for database entry, we need some data. There are 33 categories and so 33 text files in the books folder. Everyone must select atleast 4 categories and run the script bookDataFile.py (The one present inside the folder and not the other) <b>after the making changes to 'categories' array present in line 21.</b>
 <br>
 Don't forget to mention the categories you chose to others.
-
-<br>
-some error in categories = ['Historical Fiction','Self Help','Spirituality','Sports']
