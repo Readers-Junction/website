@@ -39,9 +39,9 @@ Categories Available
 <br>~~Biography~~
 <br>~~Business~~
 <br>~~Children-s~~
-<br>~~Classics ~~
-<br>Comics
-<br>Contemporary
+<br>~~Classics~~
+<br>~~Comics~~
+<br>~~Contemporary~~
 <br>Crime
 <br>Fantasy
 <br>Fiction

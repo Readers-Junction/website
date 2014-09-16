@@ -7,7 +7,9 @@ Created on Tue Sep 16 23:35:59 2014
 To filter out the books whose data has not been written
 """
 
-categories = ['Art', 'Biography']
+#categories = ['Art','Biography','Business','Children-s','Classics','Comics','Contemporary','Crime','Fantasy','Fiction','Historical Fiction','History','Horror','Humor And Comedy','Memoir','Music','Mystery','Non Fiction','Paranormal','Philosophy','Poetry','Psychology','Religion','Romance','Science','Science Fiction','Self Help','Suspense','Spirituality','Sports','Thriller','Travel','Young Adult']
+
+categories = ['Art', 'Biography','Business','Children-s','Classics','Comics','Contemporary']
 for cat in categories:
         i=0
         x=0
@@ -29,7 +31,6 @@ for cat in categories:
                 x=0
         
         if(len(names)==len(bookNames)):
-            f3.write('ALL DONE');
             f3.close()
             f2.close()
             fid.close()
