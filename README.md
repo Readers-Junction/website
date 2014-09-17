@@ -33,3 +33,38 @@ AFTER Install
 <br>In order to create files for database entry, we need some data. There are 33 categories and so 33 text files in the books folder. Everyone must select atleast 4 categories and run the script bookDataFile.py (The one present inside the folder and not the other) <b>after the making changes to 'categories' array present in line 21.</b>
 <br>
 Don't forget to mention the categories you chose to others.
+
+Categories Available
+<br>~~Art~~
+<br>~~Biography~~
+<br>~~Business~~
+<br>~~Children-s~~
+<br>~~Classics~~
+<br>~~Comics~~
+<br>~~Contemporary~~
+<br>Crime
+<br>Fantasy
+<br>Fiction
+<br>Historical Fiction
+<br>History
+<br>Horror
+<br>Humor And Comedy
+<br>Memoir
+<br>Music
+<br>Mystery
+<br>Non Fiction
+<br>Paranormal
+<br>Philosophy
+<br>Poetry
+<br>Psychology
+<br>Religion
+<br>Romance
+<br>Science
+<br>Science Fiction
+<br>Self Help
+<br>Suspense
+<br>Spirituality
+<br>Sports
+<br>Thriller
+<br>Travel
+<br>Young Adult
