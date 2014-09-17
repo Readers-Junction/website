@@ -1,6 +1,6 @@
 @font-face {
     font-family: websiteFont;
-    src: url(fonts/DAYROAM.ttf);
+    src: url(../fonts/DAYROAM.ttf);
 }
 
 body {
@@ -9,7 +9,7 @@ body {
 	line-height: 1.5em;
 	font-family: websiteFont;
 	font-size: 14px;
-/*	background: url(images/background.png) no-repeat; */
+/*	background: url(../images/background.png) no-repeat; */
 	background:#ffffdd
 }
 
@@ -56,7 +56,7 @@ img {
 	width: 100px;
 	padding: 4px 0 5px 0;
 	margin-bottom: 10px; 
-	background: url(images/templatemo_btn_02.jpg) no-repeat;
+	background: url(../images/templatemo_btn_02.jpg) no-repeat;
 	color: #FFFFFF;
 	font-weight: bold;
 	text-decoration: none;
@@ -69,7 +69,7 @@ img {
 	width: 100px;
 	padding: 4px 0 5px 0;
 	margin-bottom: 10px; 
-	background: url(images/templatemo_btn_01.jpg) no-repeat;
+	background: url(../images/templatemo_btn_01.jpg) no-repeat;
 	color: #ffffff;
 	font-weight: bold;
 	text-decoration: none;
@@ -79,7 +79,7 @@ img {
 			/* HEADER START */
 #header {
 	height: 100px;
-	background: url(images/header.jpg);
+	background: url(../images/header.jpg);
 	
 }
 
@@ -177,7 +177,7 @@ text-decoration: none;
 #main_menu {
 	clear: both;
 	height: 45px;
-	background: url(images/main_menu_bg.jpg);
+	background: url(../images/main_menu_bg.jpg);
 	position:relative;
 	top:-14px;
 	

@@ -32,7 +32,7 @@
 	top: 155px; 
 	width: 28px; 
 	height: 47px; 
-	background: url(images/slider-directions.png) no-repeat 0 0; }
+	background: url(../images/slider-directions.png) no-repeat 0 0; }
 
 #slider .jcarousel-prev { 
 left: 12px; }
@@ -56,7 +56,7 @@ height: 14px;
 font-size: 0; 
 line-height: 0;
 text-indent: -4000px; 
-background: url(images/slider-nav.png) no-repeat 0 0; 
+background: url(../images/slider-nav.png) no-repeat 0 0; 
 margin: 0 3px 0 0; 
 float: left; 
 display: inline; 
@@ -103,7 +103,7 @@ display: block;
 width: 120px; 
 height: 48px; 
 line-height: 48px; 
-background: url(images/slider-btn.png); 
+background: url(../images/slider-btn.png); 
 padding: 0 10px 0 59px; 
 color: #fff; 
 font-family: websiteFont; 
@@ -236,7 +236,7 @@ text-decoration: none; }
 	margin: 0 0 20px 0;
 	font-size: 15px;
 	color: #cbc750;
-	background: url(images/content_head_bg.jpg) repeat;
+	background: url(../images/content_head_bg.jpg) repeat;
 	max-width:500px;
 }
 

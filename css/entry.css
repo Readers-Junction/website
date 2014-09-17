@@ -11,7 +11,7 @@ body
     font-size: 12pt;
     color: #00000F;    
     font-family: "Arial", sans-serif,Tahoma,Verdana;
-	background-image:url(images/background.JPG);
+	background-image:url(../images/background.JPG);
 }
 
 tr

@@ -18,11 +18,13 @@ import re
 #Read book names from a file
 bookNames = [];
 i=0
-categories = ['Art','Biography','Business','Children-s','Classics','Comics','Contemporary','Crime','Fantasy','Fiction','Historical Fiction','History','Horror','Humor And Comedy','Memoir','Music','Mystery','Non Fiction','Paranormal','Philosophy','Poetry','Psychology','Religion','Romance','Science','Science Fiction','Self Help','Suspense','Spirituality','Sports','Thriller','Travel','Young Adult']
+#categories = ['Art','Biography','Business','Children-s','Classics','Comics','Contemporary','Crime','Fantasy','Fiction','Historical Fiction','History','Horror','Humor And Comedy','Memoir','Music','Mystery','Non Fiction','Paranormal','Philosophy','Poetry','Psychology','Religion','Romance','Science','Science Fiction','Self Help','Suspense','Spirituality','Sports','Thriller','Travel','Young Adult']
+categories = ['Crime','Fantasy','Fiction','Historical Fiction','History','Horror','Humor And Comedy','Memoir','Music','Mystery','Non Fiction','Paranormal','Philosophy','Poetry','Psychology','Religion','Romance','Science','Science Fiction','Self Help','Suspense','Spirituality','Sports','Thriller','Travel','Young Adult']
 
 # Read book names from file Books.txt - NOTE THE CAPITAL B
 for cat in categories:
-    try:
+        i=0
+        bookNames = []
         f2 = open(cat+'data.txt', 'w')
         with open(cat+'books.txt','r') as fid:
             for line in fid:
@@ -33,7 +35,6 @@ for cat in categories:
         
         flip='flipkart'
         good = 'goodreads'
-        
         #MAIN loop begins - insert all books available in array
         for i in range(0,len(bookNames)):
             url = ''
@@ -44,7 +45,6 @@ for cat in categories:
             price = 0
             rating = 0
             genreArray = []
-            
             # Search Web for flipkart link - for price, pages author, etc.
             for url in search(bookNames[i]+' buy book flipkart', tld='in', lang='en-us', stop=5):
                 if (flip in url):
@@ -55,7 +55,6 @@ for cat in categories:
                 if (good in url2):
                     url2 = str(url2)
                     break
-            
             try:
                 r  = requests.get(url);
                 soup = BeautifulSoup(r.text)
@@ -70,19 +69,23 @@ for cat in categories:
                 gTitle = str(soup2.title).upper()
             except(requests.exceptions.MissingSchema):
                 gTitle = 'Placeholder Value'
-                bookNames[i]
+                print bookNames[i]
             
         
             name=bookNames[i]
             try: #If MRP != SP
                 price = str(soup.find('span', class_='price list old-price').text)
+                price = price.replace(',','')
+                price = int(price[price.index('.')+2:])
             except(AttributeError): # If MRP = SP
                 try:
                     price = str(soup.find('span', class_='fk-font-26 pprice fk-bold vmiddle').text)
+                    price = price.replace(',','')
+                    price = int(price[price.index('.')+2:])
                 except:
                     pass
             try:
-                price = int(price[price.index('.')+2:])
+                
                 valueAr = soup.findAll('td', class_='specs-value fk-data')
                 keyAr2 = soup.findAll('td', class_='specs-key')
                 keyAr = []
@@ -131,9 +134,9 @@ for cat in categories:
                         genreArray.remove(tname)
             except:
                 pass
-                
+            params = [isbn13, isbn10, name, author, pages, language, rating, price, rent, year, publisher]
+            print params
             if(author!=''): #Write valid entries only
-                params = [isbn13, isbn10, name, author, pages, language, rating, price, rent, year, publisher]
                 for d1 in params:
                     f2.write(str(d1))
                     f2.write('\n')
@@ -146,11 +149,10 @@ for cat in categories:
                 f2.write('========\n')
                 print bookNames[i], 'written'
             
-        f2.close()
-        fid.close()
+        
         print'\n'
         print cat, ' - WRITTEN'
         print'\n'
         print'\n'
-    except:
-        pass
+        f2.close()
+        fid.close()
