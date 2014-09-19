@@ -2,14 +2,16 @@
 
 #socialside {
     position: fixed;
-    top: 10px;
-    left: 0;
+	top: 10px;
+    right: 0;
+	margin-top:10%;
 }
 .mainul {
     margin: 0;
     padding: 0;
     list-style: none;
     text-align: right;
+	
 }
 
 .scli {
@@ -17,9 +19,10 @@
     width: 132px;
     list-style: none;
     border-radius: 0 8px 8px 0;
-    margin-left: -140px;
-    left:0;
+    margin-right: -132px;
+	left:0;
     cursor: pointer;
+	
     
 }
 
@@ -28,8 +31,8 @@
     border-radius: 0 5px 5px 0;
     height: 30px;
     position: absolute;
-    right: 0;
-    top:0;
+    left: 0;
+    bottom:0;
 }
 
 .scli li {
@@ -40,4 +43,5 @@
     font-family: "Archivo Black";
     color: #fff;
     text-shadow: 1px 1px 1px #000;
+	
 }
