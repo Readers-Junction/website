@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Readers' Junction | Rent Books and Magazines | Contact</title>
+<title>Contact | Readers' Junction | Rent Books and Magazines</title>
 
 <link rel="stylesheet" type="text/css" href="css/view.css" media="all">
 <link href="css/common.css" rel="stylesheet" type="text/css" />
@@ -42,47 +42,57 @@
             <li><a href="contact.html">Contact</a></li>
     	</ul>
     </div> <!-- end of menu -->  
+	
 	<img id="top" src="images/form_top.png" alt="">
 	<div id="form_container">
 	
 		<h1><a>Contact Form</a></h1>
-		<form id="form_901814" class="appnitro"  method="post" action="">
-					<div class="form_description">
-			<h2>Contact Form</h2>
-			<p>Leave Your message.</p>
-		</div>						
-			<ul >
 			
+			<form id="contact" class="form1"  method="post" action="contactProcess.php">
+				
+				<div class="form_description">
+					<h2>Contact Form</h2>
+					<p>Leave Your message.</p>
+				</div>						
+				
+				<ul >
+					
 					<li id="li_2" >
-		<label class="description" for="element_2">Name </label>
-		<span>
-			<input id="element_2_1" name= "element_2_1" class="element text" maxlength="255" size="8" value=""/>
-			<label>First</label>
-		</span>
-		<span>
-			<input id="element_2_2" name= "element_2_2" class="element text" maxlength="255" size="14" value=""/>
-			<label>Last</label>
-		</span> 
-		</li>		<li id="li_1" >
-		<label class="description" for="element_1">Message </label>
-		<div>
-			<textarea id="element_1" name="element_1" class="element textarea medium"></textarea> 
-		</div> 
-		</li>		<li id="li_3" >
-		<label class="description" for="element_3">Email </label>
-		<div>
-			<input id="element_3" name="element_3" class="element text medium" type="text" maxlength="255" value=""/> 
-		</div> 
-		</li>		<li id="li_4" >
-		<label class="description" for="element_4">Phone </label>
-		<span>
-			<input id="element_4_1" name="element_4_1" class="element text" size="30" maxlength="10" value="" type="text">
-		</span>
-		 
-		</li>
+						<label class="description" for="element_2">Name </label>
+						<span>
+							<input id="element_2_1" name= "element_2_1" class="element text" maxlength="255" size="8" value=""/>
+							<label>First</label>
+						</span>
+						<span>
+							<input id="element_2_2" name= "element_2_2" class="element text" maxlength="255" size="14" value=""/>
+							<label>Last</label>
+						</span> 
+					</li>		
+					
+					<li id="li_1" >
+						<label class="description" for="element_1">Message </label>
+						<div>
+							<textarea id="element_1" name="element_1" class="element textarea medium"></textarea> 
+						</div> 
+					</li>		
+					
+					<li id="li_3" >
+						<label class="description" for="element_3">Email </label>
+						<div>
+							<input id="element_3" name="element_3" class="element text medium" type="text" maxlength="255" value=""/> 
+						</div> 
+					</li>		
+					
+					<li id="li_4" >
+						<label class="description" for="element_4">Phone </label>
+						<span>
+							<input id="element_4_1" name="element_4_1" class="element text" size="30" maxlength="10" value="" type="text">
+						</span>
+						 
+					</li>
 			
 					<li class="buttons">
-			    <input type="hidden" name="form_id" value="901814" />
+						<input type="hidden" name="form_id" value="901814" />
 			    
 				<input id="saveForm" class="button_text" type="submit" name="submit" value="Submit" />
 		</li>
@@ -94,6 +104,6 @@
         Copyright © 2048 <a href="#"><strong>Your Company Name</strong></a>
    
 </div>
-	<img id="bottom" src="images/form_bottom.png" alt="">
+	<!--<img id="bottom" src="images/form_bottom.png" alt="">-->
 	</body>
 </html>

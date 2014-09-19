@@ -345,8 +345,13 @@
 							
                 </div>
             </li>
-			
-			
+		</div>
+		<div id="footer">
+    
+	   <a href="index.html">Home</a> | <a href="books.html">Books</a> | <a href="mags.html">Magazines</a> | <a href="about.html">About</a> | <a href="contact.html">Contact Us</a><br />
+        Copyright © 2048 <a href="#"><strong>Readers' Junction</strong></a>
+   
+	</div> 
 			
 </body>
 

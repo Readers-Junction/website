@@ -10,11 +10,11 @@ body {
 	font-family: websiteFont;
 	font-size: 14px;
 /*	background: url(../images/background.png) no-repeat; */
-	background:#ffffdd
+	background:#efefef
 }
 
-a:link, a:visited { color: #e6e154; text-decoration: none; font-weight: bold;} 
-a:active, a:hover { color: #e6e154; text-decoration: underline;}
+a:link, a:visited { color: #c4444c; text-decoration: none; font-weight: bold;} 
+a:active, a:hover { color: #c4444c;text-decoration: underline;}
 
 p {
 	margin: 0px;
@@ -102,6 +102,14 @@ img {
 #sitename a:hover{
 text-decoration: none;
 }
+
+#cart{
+position:relative;
+float: right;
+margin-right:20px;
+margin-top: 20px;
+}
+
 				/*HEADER END*/
 					
 				/* SEARCH BOX START*/
@@ -113,8 +121,8 @@ text-decoration: none;
     border-width: 1px;
     border-style: solid;
     border-color: #c4d9df #a4c3ca #83afb7;            
-    width: 90%;
-	margin-left:5%;
+    width: 100%;
+	padding: 10px 30px 10px 0px;
 	height: 35px;
     overflow: hidden; /* Clear floats */
 }
@@ -203,8 +211,27 @@ display:inline;
 	color: #969547;
 }
 
-#main_menu li a:hover, #main_menu li .current{
+#main_menu li a:hover{
 	color: #fcf88e;
 }
 
 		/* MENU END*/
+
+		/* footer */
+#footer {
+	clear: both;
+	padding: 20px 0px 20px 0;
+	text-align: center;
+	border-top: 1px solid #25211e;
+	color: #999;
+	background-color: #111110;
+	position:relative;
+	width:100%
+}
+
+#footer a{
+	color: #fff;
+	font-weight: normal;
+}
+/* end of footer */
+
