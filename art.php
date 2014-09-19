@@ -5,7 +5,10 @@
     <title>Books Display</title>
     <link rel="stylesheet" href="css/common.css" type="text/css" />
 	<link rel="stylesheet" href="css/bookDisplay.css" type="text/css" />
+	<link rel="stylesheet" href="css/menu.css" type="text/css" />
 	
+	<script type="text/javascript" src="js/menu.js"></script>
+
 </head>
 
 <body>
@@ -30,16 +33,19 @@
 		</form>
 	</div>
 	
+	
 	<div id="main_menu">
-    	<ul class="Level_1">
-            <li><a href="index.html" class="current">Home</a></li>
-            <li><a href="books.html">Books</a></li>
-			<li><a href="mags.html">Magazines</a></li>            
-            <li><a href="about.html">Company</a></li> 
-            <li><a href="contact.html">Contact</a></li>
-    	</ul>
-    </div> <!-- end of menu -->   		
- 	
+		<div id = "main_menu_2">
+			<ul class="Level_1">
+				<li><a href="index.html" class="current">Home</a></li>
+				<li><a href="books.html">Books</a></li>
+				<li><a href="mags.html">Magazines</a></li>            
+				<li><a href="about.html">Company</a></li> 
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</div>
+	</div> <!-- end of menu -->   		
+	
 	<div id = "catText">
 		<ul>
 			<li><a href = "art.php">Art</a>

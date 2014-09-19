@@ -10,7 +10,7 @@ body {
 	font-family: websiteFont;
 	font-size: 14px;
 /*	background: url(../images/background.png) no-repeat; */
-	background:#efefef
+	background:#F1F1F1
 }
 
 a:link, a:visited { color: #c4444c; text-decoration: none; font-weight: bold;} 
@@ -79,9 +79,10 @@ img {
 			/* HEADER START */
 #header {
 	height: 100px;
-	background: url(../images/header.jpg);
+	background: #f1f1f1
 	
 }
+
 
 #logo {
 	float: left; 
@@ -94,13 +95,22 @@ img {
 
 #sitename{
 	font-size:70px;
+	
 	display:inline;
 	position:relative;
 	top: 30px;
 	left: 50px;
+	text-shadow: 0 1px 0 #333,
+				0 2px 0 #333,
+0 3px 0 #333,
+0 4px 0 #333,
+0 5px 0 #333,
+0 6px 0 #333,
+0 7px 5px rgba(0, 0, 0, 0.5);
 	}
-#sitename a:hover{
+#sitename a:hover, a:link, a:visited, a:active{
 text-decoration: none;
+color:#787878;
 }
 
 #cart{
@@ -181,7 +191,7 @@ margin-top: 20px;
 
 		
 		/* MENU START */
-
+/*
 #main_menu {
 	clear: both;
 	height: 45px;
@@ -214,7 +224,7 @@ display:inline;
 #main_menu li a:hover{
 	color: #fcf88e;
 }
-
+*/
 		/* MENU END*/
 
 		/* footer */
