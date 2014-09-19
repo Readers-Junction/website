@@ -1,0 +1,77 @@
+
+.row-4-thumbs li {
+width:24.6%;
+}
+
+
+
+div.displayBooks {
+position:relative;
+width:75%;
+}
+
+
+ul.books {
+margin-left:10%;
+}
+
+
+ul.books li {
+display:inline-block;
+vertical-align:top;
+}
+
+#catText{
+float:left;
+}
+
+#catText ul {
+	padding: 10px 0 8px 0;
+	margin: 0;
+}
+
+#catText ul li{
+	padding: 0 0 3px 30px;	
+	list-style: none;
+}
+
+#catText ul li a{
+	font-weight: normal;
+	text-decoration: none;
+	color: #166547;
+}
+
+#bookPics{
+float:right;
+margin-right:10%;
+}
+
+li.book_pic a{
+float:left;
+font-size:15px;
+color: #000000;
+
+}
+
+li.book_pic strong {
+float:left;
+font-size:18px;
+font-weight:bold;
+margin-bottom:15px;
+color: #000000;
+}
+
+#orderByForm{
+float:right;
+}
+
+span.stars, span.stars span {
+    display: block;
+    background: url(images/stars.png) 0 -16px repeat-x;
+    width: 80px;
+    height: 16px;
+}
+
+span.stars span {
+    background-position: 0 0;
+}
