@@ -27,12 +27,29 @@ if (isset($_POST['login']))
         $Results = mysqli_fetch_array($strSQL);
 		if(count($Results)>=1)
         {
+			session_start();
+			$_SESSION['login'] = "1";
 			header("location: welcome.php");
         }
         else
         {
-			//SET SESSION VARIABLES
-            header("location: error.php");
+			$strSQL = mysqli_query($connection,"select * from users where email='".$email."'");
+			$Results = mysqli_fetch_array($strSQL);
+			if(count($Results)>=1)
+			{
+				session_start();
+				$_SESSION['login'] = "";
+				$_SESSION['error'] = "0";
+				header("location: error.php");
+
+			}
+			else
+			{
+				session_start();
+				$_SESSION['login'] = "";
+				$_SESSION['error'] = "1";
+				header("location: error.php");
+			}
         }        
     }
 elseif(isset($_POST['signup']))
@@ -46,17 +63,23 @@ elseif(isset($_POST['signup']))
 		$numResults = mysqli_num_rows($result);
 		if (!filter_var($email, FILTER_VALIDATE_EMAIL)) // Validate email address
         {
-            //SET SESSION VARIABLES
-			header("location: error.php");
+            session_start();
+			$_SESSION['login'] = "";
+			$_SESSION['error'] = "2";
+            header("location: error.php");
         }
         elseif($numResults>=1)
         {
-            //SET SESSION VARIABLES
-			header("location: error.php");
+            session_start();
+			$_SESSION['login'] = "";
+			$_SESSION['error'] = "3";
+            header("location: error.php");
         }
         else
         {
             mysqli_query($connection,"INSERT into users(name,email,pass) VALUES('".$name."','".$email."','".$password."')");
+			session_start();
+			$_SESSION['login'] = "1";
 			header("location: welcome.php");
         }
     }
