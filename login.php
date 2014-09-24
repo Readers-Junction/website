@@ -29,6 +29,7 @@ if (isset($_POST['login']))
         {
 			session_start();
 			$_SESSION['login'] = "1";
+			$_SESSION['email'] = $email;
 			header("location: welcome.php");
         }
         else
@@ -80,6 +81,7 @@ elseif(isset($_POST['signup']))
             mysqli_query($connection,"INSERT into users(name,email,pass) VALUES('".$name."','".$email."','".$password."')");
 			session_start();
 			$_SESSION['login'] = "1";
+			$_SESSION['email'] = $email;
 			header("location: welcome.php");
         }
     }
