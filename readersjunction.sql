@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 19, 2014 at 03:26 AM
+-- Generation Time: Sep 24, 2014 at 10:45 AM
 -- Server version: 5.6.20
 -- PHP Version: 5.5.15
 
@@ -4140,6 +4140,27 @@ INSERT INTO `travelbooks` (`isbn13`, `isbn10`, `book_name`, `author`, `pages`, `
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `users`
+--
+
+CREATE TABLE IF NOT EXISTS `users` (
+`id` int(11) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `pass` varchar(50) NOT NULL,
+  `reg_date` datetime DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `email`, `pass`, `reg_date`) VALUES
+(1, 'H', 'h1@gmail.com', '202cb962ac59075b964b07152d234b70', '2014-09-24 13:51:37');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `youngadultbooks`
 --
 
@@ -4536,11 +4557,26 @@ ALTER TABLE `travelbooks`
  ADD PRIMARY KEY (`isbn13`);
 
 --
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+ ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `youngadultbooks`
 --
 ALTER TABLE `youngadultbooks`
  ADD PRIMARY KEY (`isbn13`);
 
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -1,48 +1,69 @@
+<html>
+<head>
+</head>
+<body>
 <?php
+$host="localhost"; // Host name
+$username="root"; // Mysql username
+$password="toor"; // Mysql password
+$db_name="readersjunction"; // Database name
+$tbl_name="user"; // Table name
 
-$con = mysql_connect( "localhost", "root", "toor") or die(mysql_error()); 
-$connection = mysql_select_db( "readersjunction", $con) or die(mysql_error()); 
 
-if(isset($_POST['action']))
-{          
-    if($_POST['action']=="login")
-    {
-        $email = mysqli_real_escape_string($connection,$_POST['email']);
-        $password = mysqli_real_escape_string($connection,$_POST['password']);
-        $strSQL = mysqli_query($connection,"select name from users where email='".$email."' and password='".md5($password)."'");
+// Connect to server and select databse.
+$connection = mysqli_connect("$host", "$username", "$password", "$db_name");
+
+if (mysqli_connect_errno())
+  {
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  }
+
+if (isset($_POST['login'])) 
+{
+        $email = mysqli_real_escape_string($connection,$_POST['mail']);
+        $password = mysqli_real_escape_string($connection,$_POST['pass']);
+		$password = md5($password);
+        $strSQL = mysqli_query($connection,"select * from users where email='".$email."' and pass='".$password."'");
         $Results = mysqli_fetch_array($strSQL);
-        if(count($Results)>=1)
+		if(count($Results)>=1)
         {
-            $message = $Results['name']." Login Sucessfully!!";
+			header("location: welcome.php");
         }
         else
         {
-            $message = "Invalid email or password!!";
+			//SET SESSION VARIABLES
+            header("location: error.php");
         }        
     }
-    elseif($_POST['action']=="signup")
+elseif(isset($_POST['signup']))
     {
         $name       = mysqli_real_escape_string($connection,$_POST['name']);
-        $email      = mysqli_real_escape_string($connection,$_POST['email']);
-        $password   = mysqli_real_escape_string($connection,$_POST['password']);
+        $email      = mysqli_real_escape_string($connection,$_POST['mail']);
+        $password   = mysqli_real_escape_string($connection,$_POST['pass']);
+		$password = md5($password);
         $query = "SELECT email FROM users where email='".$email."'";
         $result = mysqli_query($connection,$query);
-        $numResults = mysqli_num_rows($result);
-        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) // Validate email address
+		$numResults = mysqli_num_rows($result);
+		if (!filter_var($email, FILTER_VALIDATE_EMAIL)) // Validate email address
         {
-            $message =  "Invalid email address please type a valid email!!";
+            //SET SESSION VARIABLES
+			header("location: error.php");
         }
         elseif($numResults>=1)
         {
-            $message = $email." Email already exist!!";
+            //SET SESSION VARIABLES
+			header("location: error.php");
         }
         else
         {
-            mysql_query("insert into users(name,email,password) values('".$name."','".$email."','".md5($password)."')");
-            $message = "Signup Sucessfully!!";
+            mysqli_query($connection,"INSERT into users(name,email,pass) VALUES('".$name."','".$email."','".$password."')");
+			header("location: welcome.php");
         }
     }
-}
-
+	
+	
+	mysqli_close($connection);
 ?>
 
+</body>
+</html>
