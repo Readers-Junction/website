@@ -1,0 +1,38 @@
+
+.col-md-10 {
+	margin-left: -40px;
+}
+
+
+li.cat_pic li.book_pic strong {
+font-size:20px;
+font-weight:bold;
+padding:0 0 0 5px;
+}
+
+ul.books li {
+display:inline-block;
+vertical-align:top;
+}
+#main_content{
+margin-top:200px;
+}
+
+#catText ul {
+	padding: 10px 0 8px 0;
+}
+
+#catText ul li{
+	padding: 0 0 3px 30px;	
+	list-style: none;
+}
+
+#catText ul li a{
+	font-weight: normal;
+	text-decoration: none;
+	color: #166547;
+}
+
+#catPics{
+margin-right:10%;
+}
