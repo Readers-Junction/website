@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 24, 2014 at 10:45 AM
+-- Generation Time: Sep 24, 2014 at 01:12 PM
 -- Server version: 5.6.20
 -- PHP Version: 5.5.15
 
@@ -4145,18 +4145,22 @@ INSERT INTO `travelbooks` (`isbn13`, `isbn10`, `book_name`, `author`, `pages`, `
 
 CREATE TABLE IF NOT EXISTS `users` (
 `id` int(11) NOT NULL,
-  `name` varchar(50) NOT NULL,
-  `email` varchar(50) NOT NULL,
-  `pass` varchar(50) NOT NULL,
-  `reg_date` datetime DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+  `name` varchar(32) DEFAULT NULL,
+  `email` varchar(32) DEFAULT NULL,
+  `pass` varchar(40) DEFAULT NULL,
+  `join_date` datetime DEFAULT NULL,
+  `gender` varchar(1) DEFAULT NULL,
+  `birthdate` date DEFAULT NULL,
+  `city` varchar(32) DEFAULT NULL,
+  `picture` varchar(32) DEFAULT NULL
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `email`, `pass`, `reg_date`) VALUES
-(1, 'H', 'h1@gmail.com', '202cb962ac59075b964b07152d234b70', '2014-09-24 13:51:37');
+INSERT INTO `users` (`id`, `name`, `email`, `pass`, `join_date`, `gender`, `birthdate`, `city`, `picture`) VALUES
+(1, 'Harsh', 'h1@gmail.com', '202cb962ac59075b964b07152d234b70', NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -4576,7 +4580,7 @@ ALTER TABLE `youngadultbooks`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
