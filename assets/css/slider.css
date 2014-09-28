@@ -1,0 +1,116 @@
+
+#slider { 
+	max-width: 900px;
+	max-height:600px;
+    padding: 0 20px 40px 20px;
+    margin: 30px;
+	position: relative; 
+	z-index: 10;
+	color: #ff0000
+}
+
+#slider .jcarousel-container { 
+	width: 857px;
+	height:310px;
+	padding: 36px 14px 20px 13px; }
+
+#slider .jcarousel-clip { 
+	width: 857px; 
+	height: 308px; 
+	overflow: hidden;
+	padding-left:20px 	
+}
+
+#slider .jcarousel-item { 
+	width: 857px; 
+	height: 308px; }
+
+#slider .jcarousel-prev, #slider .jcarousel-next { 
+	position: absolute;
+	top: 155px; 
+	width: 28px; 
+	height: 47px; 
+	background: url(../img/slider-directions.png) no-repeat 0 0; }
+
+#slider .jcarousel-prev { 
+left: 12px; }
+
+#slider .jcarousel-next { 
+right: 5px; 
+background-position: right 0; 
+cursor: pointer; }
+
+#slider .nav { 
+position: absolute; 
+bottom: 50px; 
+left: 459px; 
+width: 80px; 
+height: 14px; 
+z-index: 100; }
+
+#slider .nav a { 
+width: 14px; 
+height: 14px;
+font-size: 0; 
+line-height: 0;
+text-indent: -4000px; 
+background: url(../img/slider-nav.png) no-repeat 0 0; 
+margin: 0 3px 0 0; 
+float: left; 
+display: inline; 
+margin: 0 3px; }
+
+#slider .nav a.active { 
+background-position: right 0; }
+
+#slider .image { 
+float: left;
+margin: 15px 0px 15px 40px; 
+display: inline; 
+}
+
+#slider .details { 
+float: right; 
+display: inline;
+width: 368px; 
+padding: 4px 50px 0 0; }
+
+#slider .details h2 { 
+font-size: 40px;
+padding-top: 30px;
+padding-bottom: 15px; 
+position: relative; 
+width: 100%; 
+margin: -7px 0 0; }
+
+#slider .details .title { 
+padding-top: 20px;
+font-size: 18px; 
+line-height: 22px; 
+font-family: websiteFont; 
+padding-bottom: 20px; }
+
+#slider .details .description { 
+font-family: websiteFont;
+font-size: 14px; 
+line-height: 18px; 
+padding-bottom: 19px; }
+
+#slider .read-more-btn { 
+display: block; 
+width: 120px; 
+height: 48px; 
+line-height: 48px; 
+background: url(../img/slider-btn.png); 
+padding: 0 10px 0 59px; 
+color: #fff; 
+font-family: websiteFont; 
+font-style: italic; 
+font-weight: bold; 
+font-size: 23px; 
+margin-left: 3px; }
+
+#slider .read-more-btn:hover { 
+color: #0f173a; 
+text-decoration: none; }
+

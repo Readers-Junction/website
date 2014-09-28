@@ -3,15 +3,12 @@
 </head>
 <body>
 <?php
-$host="localhost"; // Host name
-$username="root"; // Mysql username
-$password="toor"; // Mysql password
-$db_name="readersjunction"; // Database name
+require_once('connectvars.php');
 $tbl_name="user"; // Table name
 
 
 // Connect to server and select databse.
-$connection = mysqli_connect("$host", "$username", "$password", "$db_name");
+$connection = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 
 if (mysqli_connect_errno())
   {
