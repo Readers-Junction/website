@@ -369,10 +369,76 @@ a:after {
 }
 
 
+/* Carousel	*/
+#carousel {
+        width:900px;
+        height:230px;
+        position:relative;
+        clear:both;
+        overflow:hidden;
+        background:#FFF;
+}
+
+#carousel img {
+        visibility:hidden; /* hide images until carousel can handle them */
+        cursor:pointer; /* otherwise it's not as obvious items can be clicked */
+		width:150px;
+}
+
+
+span.dropt {
+border-bottom: thin dotted; 
+color:white;
+}
+
+/*
+span.dropt b{
+padding-left:10%;
+color:#000;
+}*/
+
+span.dropt:hover {
+text-decoration: none; 
+background: #8f8f8f; 
+z-index: 6; 
+}
+
+span.dropt span {
+position: absolute; 
+left: -9999px;
+padding: 3px 3px 3px 3px;
+border-style:solid; 
+border-color:black; 
+border-width:1px; 
+z-index: 6;
+}
+
+span.dropt:hover span {
+left: 2%; 
+background: #8f8f8f;
+} 
+
+span.dropt span {
+position: absolute; 
+left: -9999px;
+padding: 3px 3px 3px 3px; 
+border-style:solid; 
+border-color:black; 
+border-width:1px;
+}
+
+span.dropt:hover span {
+margin: 0px 0 0 170px; 
+background: #8f8f8f; 
+z-index:6;
+} 	
+
+
 
 /* ==========================================================================
    Services Section
    ========================================================================== */
+
 
 .service-trigger {
     display: block;
