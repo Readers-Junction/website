@@ -1,7 +1,7 @@
 <?PHP
 session_start();
 if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
-	
+	header ("Location: index.html");
 	if (isset($_SESSION['error']))
 	{
 		if ($_SESSION['error']==0)
