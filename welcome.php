@@ -18,18 +18,19 @@ if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
 
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
+	<style >
+	a, a:before, a:after  {color: #999; text-decoration: none; outline: 0;}
+	a:hover, a:focus {
+    color: #666;
+    text-decoration: none;
+    outline: 0;
+}
+
+	</style>
 	
 	<!-- Other CSS -->
-	<link rel="stylesheet" href="assets/css/subpage.css" type="text/css" />
 	<link rel="stylesheet" href="assets/css/icomoon.css">
-	<link rel="stylesheet" href="assets/css/slider.css">
 	
-	
-	<!-- JavaScript -->
-	<script type="text/javascript" src="assets/js/jquery.min.js"></script>
-	<script type="text/javascript" src="assets/js/jquery.jcarousel.min.js"></script>
-	<script type="text/javascript" src="assets/js/jcarousellite_1.0.1.js"></script>
-	<script type="text/javascript" src="assets/js/sliderFunctions.js"></script>
 	
 </head>
 
@@ -64,121 +65,18 @@ if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
 		
 		
 	<div id="main_content" class="container">
-		<!-- ==== SLIDER ==== -->	
-		<div id="slider">
-		<br><br><br><h3>CHECK FOR PROBLEM HERE</h3>
-			<div class="shell">
-				<ul>
-					<li>
-						<div class="image">
-							<img src="assets/img/slider1.jpg" alt="Slider 1" width = "300px" />
-						</div>
-						<div class="details">
-							<h2>Special Offers</h2>
-							<p class="title">25% Discount</p>
-							<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id odio in tortor scelerisque dictum. Phasellus varius sem sit amet metus volutpat vel vehicula nunc lacinia.</p>
-							<a href="offers.html" class="read-more-btn">Read More</a>
-						</div>
-					</li>
-					<li>
-						<div class="image">
-						</div>
-							<img src="assets/img/slider2.png" alt="Slider 2" width = "300px" />
-						<div class="details">
-							<h2>Most Popular</h2>
-							<p class="title">Check out the most popular books</p>
-							<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id odio in tortor scelerisque dictum. Phasellus varius sem sit amet metus volutpat vel vehicula nunc lacinia.</p>
-							<a href="#" class="read-more-btn">Read More</a>
-						</div>
-					</li>
-					<li>
-						<div class="image">
-						</div>
-							<img src="assets/img/slider3.jpg" alt="Slider 3" width = "300px" />
-						<div class="details">
-							<h2>Top Rated</h2>
-							<p class="title">Check out the top rated books</p>
-							<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id odio in tortor scelerisque dictum. Phasellus varius sem sit amet metus volutpat vel vehicula nunc lacinia.</p>
-							<a href="#" class="read-more-btn">Read More</a>
-						</div>
-					</li>
-				</ul>
-				<div class="nav">
-					<a href="#">1</a>
-					<a href="#">2</a>
-					<a href="#">3</a>
-				</div>
-			</div>
+		<br><br><br><br>Currently this page is in a bare bones stage. It will be changed to a better looking one with more effects and better photos but the content will remain almost the same
+		<h2 align="center"> Where would you like to begin ? </h2>
+		<br><br>
+		<div class="col-lg-6">
+		<a href="books.php"><h3 align="center"> BOOKS </h3>
+		<img src="assets/img/books.png"/></a>
 		</div>
-
-		<?php
-	ini_set ("display_errors", "1");
-	error_reporting(E_ALL);
-	
-  //require_once('appvars.php');
-	require_once('connectvars.php');
-
-	// Connect to the database
-	$connection = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
-	
-	
-	$query = "SELECT * FROM users WHERE email = '" . $_SESSION['email'] . "'";
-	
-	$data = mysqli_query($connection, $query);
-	
-	if($data === FALSE) {
-    echo '234567: ', mysql_error();
-	
-	die(mysql_error()); // TODO: better error handling
-	}
-	
-	$row = mysqli_fetch_array($data);
-	
-	echo '<table>';
-    
-	
-	echo '<tr><td class="label">Name:</td><td>' . $row['name'] . '</td></tr>';
-	echo '<tr><td class="label">Registered Email:</td><td>' . $row['email'] . '</td></tr>';
-	
-	if (!empty($row['gender'])) {
-      echo '<tr><td class="label">Gender:</td><td>';
-      if ($row['gender'] == 'M') {
-        echo 'Male';
-      }
-      else if ($row['gender'] == 'F') {
-        echo 'Female';
-      }
-      else {
-        echo '?';
-      }
-      echo '</td></tr>';
-    }
-    if (!empty($row['birthdate'])) {
-      if (!isset($_GET['user_id']) || ($_SESSION['user_id'] == $_GET['user_id'])) {
-        // Show the user their own birthdate
-        echo '<tr><td class="label">Birthdate:</td><td>' . $row['birthdate'] . '</td></tr>';
-      }
-      else {
-        // Show only the birth year for everyone else
-        list($year, $month, $day) = explode('-', $row['birthdate']);
-        echo '<tr><td class="label">Year born:</td><td>' . $year . '</td></tr>';
-      }
-    }
-    
-    if (!empty($row['city']) || !empty($row['state'])) {
-      echo '<tr><td class="label">Location:</td><td>' . $row['city'] . ', ' . $row['state'] . '</td></tr>';
-    }
-    if (!empty($row['picture'])) {
-      echo '<tr><td class="label">Picture:</td><td><img src="' . MM_UPLOADPATH . $row['picture'] .
-        '" alt="Profile Picture" /></td></tr>';
-    }
-    echo '</table>';
-    if (!isset($_GET['user_id']) || ($_SESSION['user_id'] == $_GET['user_id'])) {
-      echo '<p>Would you like to <a href="editprofile.php">edit your profile</a>?</p>';
-    }
-  
-	
-?>
+		<div class="col-lg-6">
+		<a href="mags.php"><h3 align="center"> MAGAZINES </h3>
+		<img src="assets/img/mags.jpg"/></a>
+		</div>
+	</div>
 </div>
 </body>
 </html>
