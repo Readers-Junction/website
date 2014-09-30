@@ -18,19 +18,10 @@ if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
 
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
-	<style >
-	a, a:before, a:after  {color: #999; text-decoration: none; outline: 0;}
-	a:hover, a:focus {
-    color: #666;
-    text-decoration: none;
-    outline: 0;
-}
-
-	</style>
 	
 	<!-- Other CSS -->
 	<link rel="stylesheet" href="assets/css/icomoon.css">
-	
+	<link rel="stylesheet" href="assets/css/welcome.css">
 	
 </head>
 
@@ -64,19 +55,55 @@ if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
 		</div>
 		
 		
-	<div id="main_content" class="container">
-		<br><br><br><br>Currently this page is in a bare bones stage. It will be changed to a better looking one with more effects and better photos but the content will remain almost the same
-		<h2 align="center"> Where would you like to begin ? </h2>
-		<br><br>
-		<div class="col-lg-6">
-		<a href="books.php"><h3 align="center"> BOOKS </h3>
-		<img src="assets/img/books.png"/></a>
+		<div id="main_content" class="container">
+		<br><br><br><h1>ONE WAY </h1>
+		<h4>Works for slected browsers IE>10 and other browsers here <a>http://www.w3schools.com/css/css3_3dtransforms.asp</a></h4>
+			<div id="books_container" class="col-md-6">
+				<div id="books" class="shadow">
+					<div class="front face">
+						<a href="books.php"><img src="assets/img/books.png" class="bookimg"/></a>
+					</div>
+					<div class="back face center">
+						<a href="books.php"><h1>BOOKS</h1><br>
+						<p> Select from a wide variety of books, chosen after an extensive survey</p></a>
+					</div>
+				</div>
+			</div>
+			
+			<div id="mags_container" class="col-md-6">
+				<div id="mags" class="shadow">
+					<div class="front face">
+						<a href="mags.php"><img src="assets/img/mags.jpg" class="magimg"/></a>
+					</div>
+					<div class="back face center">
+						<a href="mags.php"><h1>MAGAZINES</h1><br>
+						<p>Check the latest issues of some of the most popular magazines on India.</p></a>
+					</div>
+				</div>
+			</div>
+		
 		</div>
-		<div class="col-lg-6">
-		<a href="mags.php"><h3 align="center"> MAGAZINES </h3>
-		<img src="assets/img/mags.jpg"/></a>
+		
+		<div id="Way2">
+		<br><br><br><h1>ANOTHER WAY </h1>
+		<h3>(Safer - Works in all browser)</h3>
+		
+			<div class="booksBackground col-md-6">
+				<div class="booksTransbox">
+					<a href="books.php"><h2>BOOKS</h2></a>
+				</div>
+			</div>
+
+			<div class="magsBackground col-md-6">
+				<div class="magsTransbox">
+					<a href="mags.php"><h2>MAGAZINES</h2></a>
+				</div>
+			</div>
 		</div>
-	</div>
-</div>
+	
 </body>
 </html>
+
+
+
+		
