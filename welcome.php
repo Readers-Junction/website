@@ -55,28 +55,37 @@ if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
 		</div>
 		
 		
-		<br><br><br><br><br><br><h1>ONE WAY </h1>
+		<div id="main_content" class="container">
+		<br><br><br><h1>ONE WAY </h1>
 		<h4>Works for slected browsers IE>10 and other browsers here <a>http://www.w3schools.com/css/css3_3dtransforms.asp</a></h4>
+			<div id="books_container" class="col-md-6">
+				<div id="books" class="shadow">
+					<div class="front face">
+						<a href="books.php"><img src="assets/img/books.png" class="bookimg"/></a>
+					</div>
+					<div class="back face center">
+						<a href="books.php"><h1>BOOKS</h1><br>
+						<p> Select from a wide variety of books, chosen after an extensive survey</p></a>
+					</div>
+				</div>
+			</div>
+			
+			<div id="mags_container" class="col-md-6">
+				<div id="mags" class="shadow">
+					<div class="front face">
+						<a href="mags.php"><img src="assets/img/mags.jpg" class="magimg"/></a>
+					</div>
+					<div class="back face center">
+						<a href="mags.php"><h1>MAGAZINES</h1><br>
+						<p>Check the latest issues of some of the most popular magazines on India.</p></a>
+					</div>
+				</div>
+			</div>
 		
-		<div class="flip-3d">
-				<figure>
-					<a href="books.php"><img src="assets/img/books.png" class="bookimg" alt="BOOKS"/></a>
-					<figcaption><a href="books.php"><h1>BOOKS</h1><br></a></figcaption>
-				</figure>			
 		</div>
-		
-		
-		<div class="flip-3d">
-			<figure>
-				<a href="mags.php"><img src="assets/img/mags.jpg" class="magimg" alt="MAGAZINES"/></a>
-				<figcaption><a href="mags.php"><h1>MAGAZINES</h1><br></a></figcaption>
-			</figure>
-		</div>
-		
-		
 		
 		<div id="Way2">
-		<br><br><br><br><br><br><br><br><br><h1>ANOTHER WAY </h1>
+		<br><br><br><h1>ANOTHER WAY </h1>
 		<h3>(Safer - Works in all browser)</h3>
 		
 			<div class="booksBackground col-md-6">
@@ -91,11 +100,7 @@ if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
 				</div>
 			</div>
 		</div>
-		
-		
-		
-		
-
+	
 </body>
 </html>
 
