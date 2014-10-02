@@ -1,7 +1,7 @@
 <?PHP
 session_start();
 if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
-	header ("Location: index.html");
+	header ("Location: index.php");
 	}
 
 ?>
@@ -33,7 +33,7 @@ if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
 					<div class="col-md-9">
 						<div class="navbar-collapse collapse">
 							<ul class="nav navbar-nav">
-								<li><a href="index.html" class="smoothScroll">Home</a></li>
+								<li><a href="index.php" class="smoothScroll">Home</a></li>
 								<li> <a href="books.html" class="smoothScroll">Books</a></li>
 								<li> <a href="mags.html" class="smoothScroll">Magazines</a></li>
 								<li> <a href="faq.html" class="smoothScroll">FAQ</a></li>

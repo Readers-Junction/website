@@ -1,3 +1,44 @@
+<?PHP
+
+// For redirect incase of login error
+session_start();
+if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
+	if (isset($_SESSION['error']))
+	{
+		if ($_SESSION['error']==0)
+		{?>
+			<script>
+				alert("Incorrect Password");
+			</script>
+
+<?php 	}
+		if ($_SESSION['error']==1)
+		{ ?>
+			<script>
+				alert("Email not found in database");
+			</script>
+
+<?php 	}
+		if ($_SESSION['error']==2)
+		{?>
+			<script>
+			
+				alert("Please check your Email");
+			
+			</script>
+<?php 	}
+		if ($_SESSION['error']==3)
+		{?>
+			<script>
+			
+				alert("Already Registered");
+			
+			</script>
+<?php 	}
+	}
+	}
+?>	
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -29,7 +70,8 @@
 	<script type="text/javascript" src="assets/js/jquery.waterwheelCarousel.js"></script>
 	<script type="text/javascript" src="assets/js/carouselFunc.js"></script>
 	<script src="https://maps.googleapis.com/maps/api/js"></script>
-
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
     <!--[f lt IE 9]>
       <script src="assets/js/html5shiv.js"></script>
@@ -307,7 +349,7 @@
 							<span class="icon_title">Connect with Facebook</span>
 						</a>
 
-						<a href="#" class="social_box google">
+						<a href="googleLogin/index.php" class="social_box google">
 							<span class="icon"><i class="icon icon-google-plus"></i></span>
 							<span class="icon_title">Connect with Google</span>
 						</a>
@@ -376,11 +418,12 @@
 				</section>
 		</div>
 	
+	
+	
 		<!-- Bootstrap core JavaScript
 		================================================== -->
 		<!-- Placed at the end of the document so the pages load faster -->
 			
-
 		<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="assets/js/retina.js"></script>
 		<script type="text/javascript" src="assets/js/jquery.easing.1.3.js"></script>
@@ -418,7 +461,7 @@
 
 	})
 </script>
-		<script>
+		<script type="text/javascript">
 		  function initialize() {
 			var mapCanvas = document.getElementById('map_canvas');
 			var mapOptions = {

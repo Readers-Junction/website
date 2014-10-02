@@ -26,7 +26,7 @@
 					<div class="col-md-9">
 						<div class="navbar-collapse collapse">
 							<ul class="nav navbar-nav">
-								<li><a href="index.html" class="smoothScroll">Home</a></li>
+								<li><a href="index.php" class="smoothScroll">Home</a></li>
 								<li> <a href="books.html" class="smoothScroll">Books</a></li>
 								<li> <a href="mags.html" class="smoothScroll">Magazines</a></li>
 								<li> <a href="faq.html" class="smoothScroll">FAQ</a></li>
@@ -355,7 +355,7 @@
 		
 		
 		<div id="footer">
-			<a href="index.html">Home</a> | <a href="books.html">Books</a> | <a href="mags.html">Magazines</a> | <a href="about.html">About</a> | <a href="contact.html">Contact Us</a><br />
+			<a href="index.php">Home</a> | <a href="books.html">Books</a> | <a href="mags.html">Magazines</a> | <a href="about.html">About</a> | <a href="contact.html">Contact Us</a><br />
 			Copyright © 2048 <a href="#"><strong>Readers' Junction</strong></a>
 	   </div> 
 			

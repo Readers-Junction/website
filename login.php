@@ -38,7 +38,7 @@ if (isset($_POST['login']))
 				session_start();
 				$_SESSION['login'] = "";
 				$_SESSION['error'] = "0"; //Incorrect Password
-				header("location: error.php");
+				header("location: index.php");
 
 			}
 			else
@@ -46,7 +46,7 @@ if (isset($_POST['login']))
 				session_start();
 				$_SESSION['login'] = "";
 				$_SESSION['error'] = "1"; //Email not found in database
-				header("location: error.php");
+				header("location: index.php");
 			}
         }        
     }
@@ -64,14 +64,14 @@ elseif(isset($_POST['signup']))
             session_start();
 			$_SESSION['login'] = "";
 			$_SESSION['error'] = "2"; // Invalid Email
-            header("location: error.php"); 
+            header("location: index.php"); 
         }
         elseif($numResults>=1)
         {
             session_start();
 			$_SESSION['login'] = "";
 			$_SESSION['error'] = "3"; // Already Registered
-            header("location: error.php");
+            header("location: index.php");
         }
         else
         {
