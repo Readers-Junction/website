@@ -89,9 +89,7 @@ if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
 			require_once 'googleLogin/src/Google_Client.php';
 			require_once 'googleLogin/src/contrib/Google_Oauth2Service.php';
 
-			//start session
-			session_start();
-
+			
 			$gClient = new Google_Client();
 			$gClient->setApplicationName($app_name);
 			$gClient->setClientId($google_client_id);
@@ -177,9 +175,7 @@ if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
 		<!-- ==== HEADERWRAP ==== -->
 	    <div id="headerwrap" id="home" name="home">
 			<header class="clearfix">
-	  		 		<h1><span class="logo"><img src="assets/img/logo.png" width="100px" alt="Header Image" /></span></h1>
-	  		 		<p>Readers Junction</p>
-	  		 		<p>Books and Magazines on Rent</p>
+	  		 		
 	  		</header>	    
 	    </div><!-- /headerwrap -->
 
