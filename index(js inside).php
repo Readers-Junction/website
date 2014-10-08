@@ -62,13 +62,21 @@ if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
 		
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- TO BE SHIFTED TO END OF PAGE -->
+    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/js/modernizr.custom.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.leanModal.min.js"></script>
 	<script type="text/javascript" src="assets/js/login.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.waterwheelCarousel.js"></script>
+	<script type="text/javascript" src="assets/js/carouselFunc.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js"></script>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
     <!--[f lt IE 9]>
       <script src="assets/js/html5shiv.js"></script>
       <script src="assets/js/respond.min.js"></script>
     <![endif]-->
-	
   </head>
 
   <body>
@@ -390,7 +398,7 @@ if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
 			</div>
 		</div>
 
-		<!-- ==== LOGIN POPUP ==== -->
+		
 		<div id="modal" class="popupContainer" style="display:none;">
 			<header class="popupHeader">
 			<span class="header_title">Login</span>
@@ -477,27 +485,68 @@ if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
 	
 	
 	
-		
-		<!-- ==== JAVASCRIPT ==== -->
+		<!-- Bootstrap core JavaScript
+		================================================== -->
 		<!-- Placed at the end of the document so the pages load faster -->
 			
 		<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="assets/js/jquery.min.js"></script>
-		<script type="text/javascript" src="assets/js/jquery-func.js"></script>
-		<script type="text/javascript" src="assets/js/jquery.leanModal.min.js"></script>
 		<script type="text/javascript" src="assets/js/retina.js"></script>
 		<script type="text/javascript" src="assets/js/jquery.easing.1.3.js"></script>
 		<script type="text/javascript" src="assets/js/smoothscroll.js"></script>
-		<script type="text/javascript" src="assets/js/modernizr.custom.js"></script>
+		<script type="text/javascript" src="assets/js/jquery-func.js"></script>
 		
-		<script type="text/javascript" src="assets/js/jquery.waterwheelCarousel.js"></script>
-		<script type="text/javascript" src="assets/js/carouselFunc.js"></script>
-		<script type="text/javascript" src="assets/js/googleLoginFunc.js"></script>
-		<script type="text/javascript" src="assets/js/loginFunc.js"></script>
-		<script type="text/javascript" src="assets/js/mapFunc.js"></script>
-		<script src="https://maps.googleapis.com/maps/api/js"></script>
-		
-		
+		<!-- TO BE SHIFTED TO assets/js/login.js -->
+		<script type="text/javascript">
+	$("a[rel*=leanModal]").leanModal({top : 200, overlay : 0.6, closeButton: ".modal_close" });
+
+	$(function(){
+		// Calling Login Form
+		$("#login_form").click(function(){
+			$(".social_login").hide();
+			$(".user_login").show();
+			return false;
+		});
+
+		// Calling Register Form
+		$("#register_form").click(function(){
+			$(".social_login").hide();
+			$(".user_register").show();
+			$(".header_title").text('Register');
+			return false;
+		});
+
+		// Going back to Social Forms
+		$(".back_btn").click(function(){
+			$(".user_login").hide();
+			$(".user_register").hide();
+			$(".social_login").show();
+			$(".header_title").text('Login');
+			return false;
+		});
+
+	})
+</script>
+		<script type="text/javascript">
+		  function initialize() {
+			var mapCanvas = document.getElementById('map_canvas');
+			var mapOptions = {
+			  center: new google.maps.LatLng(17.4421, 78.4253),
+			  zoom: 8,
+			  mapTypeId: google.maps.MapTypeId.ROADMAP
+			}
+			var map = new google.maps.Map(mapCanvas, mapOptions)
+		  }
+		  google.maps.event.addDomListener(window, 'load', initialize);
+		</script>
+		<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script');
+    po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://plus.google.com/js/client:plusone.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(po, s);
+  })();
+  </script>
  </body>
 
 </html>

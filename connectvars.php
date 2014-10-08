@@ -10,6 +10,6 @@
   $google_client_secret =	'Jhj29fe47M5E7MefUijSMrcD';
   $google_redirect_url 	=	'http://localhost/website/welcome.php'; 
   $google_developer_key	=	'AIzaSyABI-BTWcwOfiWttIo77jE1YxWtQXGSFn4';
-  $app_name				= 	'65285371786-iqs1ironui565sba831i5fj9ddkocl0e'
+  $app_name				= 	'Login to Readers Jumction'
 
 ?>
