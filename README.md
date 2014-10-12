@@ -1,4 +1,4 @@
 New Website
 =======
 
-Reinsert database
+Covers - https://openlibrary.org/dev/docs/api/covers
