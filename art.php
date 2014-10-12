@@ -44,8 +44,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
-	
+		</div>													
 
 		<div id="main_content" class="container">
 			<div id = "orderByForm" class="col-sm-offset-9">
@@ -66,7 +65,7 @@
 					<input type="submit" value=" - Sort - " />
 				</form>
 			</div>
-			
+				
 			<br><br>
 			<div class="row">
 				<div class="col-sm-3" >
@@ -143,6 +142,12 @@
 				</div>
 				
 				<div class="col-sm-9 padding-right">
+					<?php 
+						mysql_connect( "localhost", "root", "toor") or die(mysql_error()); 
+						mysql_select_db( "readersjunction") or die(mysql_error()); 
+						$sort=$_POST["order"]!="choose"?$_POST["order"]:"book_name";
+						$data=mysql_query( "SELECT * FROM artbooks ORDER BY ".mysql_real_escape_string($sort)." ASC") or die(mysql_error()); 
+					?>																											
 					<div id="catPics">
 						
 						<?php include("select.php"); ?>

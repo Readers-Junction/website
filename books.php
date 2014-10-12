@@ -137,7 +137,7 @@ if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
 									
 									echo '<li class="cat_pic col-md-offset-1" data-category="'.$dc.'">';
 									echo '<div>';
-										echo '<a href="'.$small.'.php"><img src="images/categories/'.$dc.'.jpg" width = 150px alt='.$small.' /></a>';
+										echo '<a href="'.$small.'.php"><img src="assets/img/categories/'.$small.'.jpg" width = 150px alt='.$small.' /></a>';
 										echo '<h5>';
 											echo '<a href = "'.$small.'.php"><strong>';
 											echo $upper;
