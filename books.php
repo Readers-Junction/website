@@ -7,6 +7,7 @@ if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
+<!-- TO DISPLAY THE BOOK CATEGORIES -->
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,7 +35,7 @@ if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
 					<div class="col-md-9">
 						<div class="navbar-collapse collapse">
 							<ul class="nav navbar-nav">
-								<li><a href="index.php" class="smoothScroll">Home</a></li>
+								<li><a href="welcome.php" class="smoothScroll">Home</a></li>
 								<li> <a href="books.html" class="smoothScroll">Books</a></li>
 								<li> <a href="mags.html" class="smoothScroll">Magazines</a></li>
 								<li> <a href="faq.html" class="smoothScroll">FAQ</a></li>
@@ -53,78 +54,32 @@ if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
 				</div>
 			</div>
 		</div>
-				
+		
+		<?PHP 
+			require_once('connectvars.php');
+			$dbname = DB_NAME;
+			mysql_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+
+			$sql = "SHOW TABLES FROM $dbname";
+			$result = mysql_query($sql);
+			$sub1 = "books";
+		?>
+		
 		<div id="main_content" class="container">
 			<div class="row">
 			<div class="col-sm-3" >
 			<div id = "catText">
 				<ul>
-					<li><a href = "art.php">Art</a>
-					</li>
-					<li>Biography
-					</li>
-					<li>Business
-					</li>
-					<li>Children's
-					</li>
-					<li>Classics
-					</li>
-					<li>Comics
-					</li>
-					<li>Contemporary
-					</li>
-					<li>Crime
-					</li>
-					<li>Fantasy
-					</li>
-					<li>Fiction
-					</li>
-					<li>Historical Fiction
-					</li>
-					<li>History
-					</li>
-					<li>Horror
-					</li>
-					<li>Humor And Comedy
-					</li>
-					<li>Memoir
-					</li>
-					<li>Music
-					</li>
-					<li>Mystery
-					</li>
-					<li>Non Fiction
-					</li>
-					<li>Paranormal
-					</li>
-					<li>Philosophy
-					</li>
-					<li>Poetry
-					</li>
-					<li>Psychology
-					</li>
-					<li>Religion
-					</li>
-					<li>Romance
-					</li>
-					<li>Science
-					</li>
-					<li>Science Fiction
-					</li>
-					<li>Self Help
-					</li>
-					<li>Suspense
-					</li>
-					<li>Spirituality
-					</li>
-					<li>Sports
-					</li>
-					<li>Thriller
-					</li>
-					<li>Travel
-					</li>
-					<li>Young Adult
-					</li>
+					<?PHP 
+						while ($row = mysql_fetch_row($result)) {
+							$pos      = strripos($row[0], $sub1);
+							if ($pos != false) {
+								echo '<li><a href = "'.substr($row[0], 0, $pos).'.php">';
+								echo strtoupper(substr($row[0], 0, $pos));
+								echo "</a></li>";
+							}
+						}
+					?>
 				</ul>
 			</div>
 			</div>

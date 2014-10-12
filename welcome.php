@@ -33,7 +33,7 @@ if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
 					<div class="col-md-9">
 						<div class="navbar-collapse collapse">
 							<ul class="nav navbar-nav">
-								<li><a href="index.php" class="smoothScroll">Home</a></li>
+								<li><a href="welcome.php" class="smoothScroll">Home</a></li>
 								<li> <a href="books.html" class="smoothScroll">Books</a></li>
 								<li> <a href="mags.html" class="smoothScroll">Magazines</a></li>
 								<li> <a href="faq.html" class="smoothScroll">FAQ</a></li>
@@ -54,10 +54,6 @@ if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
 			</div>
 		</div>
 		
-		
-		<br><br><br><br><br><br><h1>ONE WAY </h1>
-		<h4>Works for slected browsers IE>10 and other browsers here <a>http://www.w3schools.com/css/css3_3dtransforms.asp</a></h4>
-		
 		<div class="flip-3d">
 				<figure>
 					<a href="books.php"><img src="assets/img/books.png" class="bookimg" alt="BOOKS"/></a>
@@ -73,24 +69,6 @@ if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
 			</figure>
 		</div>
 		
-		
-		
-		<div id="Way2">
-		<br><br><br><br><br><br><br><br><br><h1>ANOTHER WAY </h1>
-		<h3>(Safer - Works in all browser)</h3>
-		
-			<div class="booksBackground col-md-6">
-				<div class="booksTransbox">
-					<a href="books.php"><h2>BOOKS</h2></a>
-				</div>
-			</div>
-
-			<div class="magsBackground col-md-6">
-				<div class="magsTransbox">
-					<a href="mags.php"><h2>MAGAZINES</h2></a>
-				</div>
-			</div>
-		</div>
 		
 		
 		

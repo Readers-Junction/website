@@ -77,7 +77,6 @@ if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
 			########## MySql, Google Client details#############
 			require_once('connectvars.php');
 
-
 			//include google api files
 			require_once 'googleLogin/src/Google_Client.php';
 			require_once 'googleLogin/src/contrib/Google_Oauth2Service.php';
@@ -168,7 +167,10 @@ if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
 		<!-- ==== HEADERWRAP ==== -->
 	    <div id="headerwrap" id="home" name="home">
 			<header class="clearfix">
-	  		 		
+	  		 		<header class="clearfix">
+	  		 		<h1><span class="logo"><img src="assets/img/logo.png" width="100px" alt="Header Image" /></span></h1>
+	  		 		<p>Readers Junction</p>
+	  		 		<p>Books and Magazines on Rent</p>	  		 		
 	  		</header>	    
 	    </div><!-- /headerwrap -->
 
