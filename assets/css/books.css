@@ -15,7 +15,7 @@ display:inline-block;
 vertical-align:top;
 }
 #main_content{
-margin-top:200px;
+margin-top:100px;
 }
 
 #catText ul {
@@ -23,7 +23,7 @@ margin-top:200px;
 }
 
 #catText ul li{
-	padding: 0 0 3px 30px;	
+	padding: 0 0 3px 0px;	
 	list-style: none;
 }
 
@@ -33,6 +33,7 @@ margin-top:200px;
 	color: #166547;
 }
 
-#catPics{
-margin-right:10%;
+#catPics ul li{
+margin-bottom:2%;
+text-align:center;
 }

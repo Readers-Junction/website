@@ -67,15 +67,35 @@ if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
 		
 		<div id="main_content" class="container">
 			<div class="row">
-			<div class="col-sm-3" >
+			<div class="col-md-2" >
 			<div id = "catText">
 				<ul>
 					<?PHP 
 						while ($row = mysql_fetch_row($result)) {
 							$pos      = strripos($row[0], $sub1);
 							if ($pos != false) {
-								echo '<li><a href = "'.substr($row[0], 0, $pos).'.php">';
-								echo strtoupper(substr($row[0], 0, $pos));
+								$small = substr($row[0], 0, $pos);									
+									if ($small === 'historicalfiction')
+									{ $small = 'historical fiction';}
+									
+									if ($small === 'humorandcomedy')
+									{ $small = 'humor and comedy';}
+									
+									if ($small === 'nonfiction')
+									{ $small = 'non-fiction';}
+									
+									if ($small === 'sciencefiction')
+									{ $small = 'science fiction';}
+									
+									if ($small === 'selfhelp')
+									{ $small = 'self help';}
+									
+									if ($small === 'youngadult')
+									{ $small = 'young adult';}									
+								$upper = strtoupper($small);
+									
+								echo '<li><a href = "'.$small.'.php">';
+								echo $upper;
 								echo "</a></li>";
 							}
 						}
@@ -84,89 +104,49 @@ if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
 			</div>
 			</div>
 			
-			<div class="col-sm-9 padding-right">
+			<div class="col-md-10">
 				<div id = "catPics">
 					<ul class="categories-list books">
-							<li class="cat_pic col-md-offset-1" data-category="1">
-								<div>
-									<a href="art.php"><img src="images/categories/1.jpg" width = 150px alt="Art" /></a>
-										<h5>
-											<a href="art.php"><strong>Art</strong></a>
-										</h5>
-								</div>
-							</li>
-							<li class="cat_pic col-md-offset-1" data-category="2">
-								<div>
-									<a href="#"><img src="images/categories/2.jpg" width = 150px alt="Biography" /></a>
-										<h5>
-											<a href="#"><strong>Biography</strong></a>
-										</h5>
-								</div>
-							</li>
-							<li class="cat_pic col-md-offset-1" data-category="1">
-								<div>
-									<a href="#"><img src="images/categories/1.jpg" width = 150px alt="Art" /></a>
-										<h5>
-											<a href="#"><strong>Art</strong></a>
-										</h5>
-								</div>
-							</li>
-							<li class="cat_pic col-md-offset-1"  data-category="2">
-								<div>
-									<a href="#"><img src="images/categories/2.jpg" width = 150px alt="Biography" /></a>
-										<h5>
-											<a href="#"><strong>Biography</strong></a>
-										</h5>
-								</div>
-							</li>
-							<li class="cat_pic col-md-offset-1"  data-category="1">
-								<div>
-									<a href="#"><img src="images/categories/1.jpg" width = 150px alt="Art" /></a>
-										<h5>
-											<a href="#"><strong>Art</strong></a>
-										</h5>
-								</div>
-							</li>
-							<li class="cat_pic col-md-offset-1"  data-category="2">
-								<div>
-									<a href="#"><img src="images/categories/2.jpg" width = 150px alt="Biography" /></a>
-										<h5>
-											<a href="#"><strong>Biography</strong></a>
-										</h5>
-								</div>
-							</li>
-							<li class="cat_pic col-md-offset-1"  data-category="1">
-								<div>
-									<a href="#"><img src="images/categories/1.jpg" width = 150px alt="Art" /></a>
-										<h5>
-											<a href="#"><strong>Art</strong></a>
-										</h5>
-								</div>
-							</li>
-							<li class="cat_pic col-md-offset-1"  data-category="2">
-								<div>
-									<a href="#"><img src="images/categories/2.jpg" width = 150px alt="Biography" /></a>
-										<h5>
-											<a href="#"><strong>Biography</strong></a>
-										</h5>
-								</div>
-							</li>
-							<li class="cat_pic col-md-offset-1"  data-category="1">
-								<div>
-									<a href="#"><img src="images/categories/1.jpg" width = 150px alt="Art" /></a>
-										<h5>
-											<a href="#"><strong>Art</strong></a>
-										</h5>
-								</div>
-							</li>
-							<li class="cat_pic col-md-offset-1"  data-category="2">
-								<div>
-									<a href="#"><img src="images/categories/2.jpg" width = 150px alt="Biography" /></a>
-										<h5>
-											<a href="#"><strong>Biography</strong></a>
-										</h5>
-								</div>
-							</li>
+						<?PHP 
+							$result = mysql_query($sql);
+							$dc = 1;
+							while ($row = mysql_fetch_row($result)) {
+								$pos      = strripos($row[0], $sub1);
+								if ($pos != false) {
+									$small = substr($row[0], 0, $pos);
+									
+									if ($small === 'historicalfiction')
+									{ $small = 'historical fiction';}
+									
+									if ($small === 'humorandcomedy')
+									{ $small = 'humor and comedy';}
+									
+									if ($small === 'nonfiction')
+									{ $small = 'non-fiction';}
+									
+									if ($small === 'sciencefiction')
+									{ $small = 'science fiction';}
+									
+									if ($small === 'selfhelp')
+									{ $small = 'self help';}
+									
+									if ($small === 'youngadult')
+									{ $small = 'young adult';}
+									
+									$upper = strtoupper($small);
+									
+									echo '<li class="cat_pic col-md-offset-1" data-category="'.$dc.'">';
+									echo '<div>';
+										echo '<a href="'.$small.'.php"><img src="images/categories/'.$dc.'.jpg" width = 150px alt='.$small.' /></a>';
+										echo '<h5>';
+											echo '<a href = "'.$small.'.php"><strong>';
+											echo $upper;
+										echo "</strong></a></h5>";
+									echo "</div></li>";
+									$dc = $dc+1;
+								}
+							}
+						?>
 					</ul>
 				</div>
 			</div>
