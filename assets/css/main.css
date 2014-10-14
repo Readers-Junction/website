@@ -256,7 +256,7 @@ a:after {
 	text-align:center;
 	background-attachment: relative;
 	background-position: center center;
-	min-height: 650px;
+	min-height: 700px;
 	width: 100%;
 	
     -webkit-background-size: 100%;
@@ -490,4 +490,43 @@ z-index:6;
     
 	max-height:100%; 
 	max-width:100%;
+}
+
+
+/* 
+SOCIAL WIDGET
+================================================ */
+.social-widget {
+	margin: 8px 0 6px;
+}
+
+.social-widget a {
+	text-decoration: none;
+}
+
+.social-widget a:hover {
+	text-decoration: none;
+}
+
+.social-widget .widget {
+	display: inline-block;
+	border: none;
+	border-radius: 0;
+}
+
+.social-widget .widget div {
+	display: inline;
+}
+
+.social-widget ul li {
+	padding: 0 12px 5px 0;
+	margin: 0;
+	display: inline-block;
+	clear: none;
+	line-height: 1em;
+}
+
+.social-widget ul li img {
+background: none !important;
+border: none !important;
 }

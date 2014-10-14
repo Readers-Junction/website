@@ -171,7 +171,26 @@ if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
 	  		 		<h1><span class="logo"><img src="assets/img/logo.png" width="100px" alt="Header Image" /></span></h1>
 	  		 		<p>Readers Junction</p>
 	  		 		<p>Books and Magazines on Rent</p>	  		 		
-	  		</header>	    
+					
+					<div class="social-widget">
+						<div id="themify-social-links-2" class="widget"><ul class="social-links">
+							<li class="social-link-item twitter">
+								<a href="https://twitter.com/" title="Twitter"><img src="assets/img/twitter.png" width="32"> </a>
+							</li>
+							
+							<li class="social-link-item facebook">
+								<a href="https://www.facebook.com/" title="Facebook"><img src="assets/img/facebook.png" width="32"> </a>
+							</li>
+							
+							<li class="social-link-item facebook">
+								<a href="https://plus.google.com/" title="Google+"><img src="assets/img/g+.png" width="32"> </a>
+							</li>
+							</ul>
+						</div>
+					</div>
+					
+				</header>
+	  		</header> 
 	    </div><!-- /headerwrap -->
 
 		
@@ -495,9 +514,41 @@ if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
 		<script type="text/javascript" src="assets/js/jquery.waterwheelCarousel.js"></script>
 		<script type="text/javascript" src="assets/js/carouselFunc.js"></script>
 		<script type="text/javascript" src="assets/js/googleLoginFunc.js"></script>
-		<script type="text/javascript" src="assets/js/loginFunc.js"></script>
 		<script type="text/javascript" src="assets/js/mapFunc.js"></script>
 		<script src="https://maps.googleapis.com/maps/api/js"></script>
+		
+		<!-- TO BE SHIFTED TO EXTERNAL FILE-->
+		
+		<script type="text/javascript">
+	$("a[rel*=leanModal]").leanModal({top : 200, overlay : 0.6, closeButton: ".modal_close" });
+
+	$(function(){
+		// Calling Login Form
+		$("#login_form").click(function(){
+			$(".social_login").hide();
+			$(".user_login").show();
+			return false;
+		});
+
+		// Calling Register Form
+		$("#register_form").click(function(){
+			$(".social_login").hide();
+			$(".user_register").show();
+			$(".header_title").text('Register');
+			return false;
+		});
+
+		// Going back to Social Forms
+		$(".back_btn").click(function(){
+			$(".user_login").hide();
+			$(".user_register").hide();
+			$(".social_login").show();
+			$(".header_title").text('Login');
+			return false;
+		});
+
+	})
+</script>
 		
 		
  </body>
