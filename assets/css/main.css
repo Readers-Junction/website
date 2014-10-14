@@ -357,15 +357,15 @@ a:after {
 
 .divider1 {
 	
-	background-image: url('../img/bg/divider1.jpg')
+	background-image: url('../img/bg/divider1.jpg');
 }
 
 .divider2 {
-	background-image: url('../img/bg/divider2.jpg')
+	background-image: url('../img/bg/divider2.jpg');
 }
 
 .divider3 {
-	background-image: url('../img/bg/divider3.jpg')
+	background-image: url('../img/bg/divider3.jpg');
 }
 
 

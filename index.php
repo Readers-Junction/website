@@ -63,7 +63,8 @@ if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
 		
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script type="text/javascript" src="assets/js/login.js"></script>
+	
+	
     <!--[f lt IE 9]>
       <script src="assets/js/html5shiv.js"></script>
       <script src="assets/js/respond.min.js"></script>
@@ -137,7 +138,15 @@ if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
 			}
 		?>
 		
-		
+		<script type="text/javascript">
+
+			if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)){ //test for MSIE x.x;
+			 var ieversion=new Number(RegExp.$1) // capture x.x portion and store as a number
+			 if (ieversion<=8)
+			  window.location="ie.html"
+			}
+
+		</script>
 		<!-- ==== NAVIGATION BAR ==== -->
 		<div id="navbar-main">
 			<div class="navbar navbar-inverse navbar-fixed-top">
@@ -169,8 +178,9 @@ if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
 			<header class="clearfix">
 	  		 		<header class="clearfix">
 	  		 		<h1><span class="logo"><img src="assets/img/logo.png" width="100px" alt="Header Image" /></span></h1>
+
 	  		 		<p>Readers Junction</p>
-	  		 		<p>Books and Magazines on Rent</p>	  		 		
+	  		 		<p>Books and Magazines on Rent</p>	 
 					
 					<div class="social-widget">
 						<div id="themify-social-links-2" class="widget"><ul class="social-links">
