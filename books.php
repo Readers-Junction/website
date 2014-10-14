@@ -75,24 +75,24 @@ if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
 							$pos      = strripos($row[0], $sub1);
 							if ($pos != false) {
 								$small = substr($row[0], 0, $pos);									
-									if ($small === 'historicalfiction')
-									{ $small = 'historical fiction';}
-									
-									if ($small === 'humorandcomedy')
-									{ $small = 'humor and comedy';}
-									
-									if ($small === 'nonfiction')
-									{ $small = 'non-fiction';}
-									
-									if ($small === 'sciencefiction')
-									{ $small = 'science fiction';}
-									
-									if ($small === 'selfhelp')
-									{ $small = 'self help';}
-									
-									if ($small === 'youngadult')
-									{ $small = 'young adult';}									
 								$upper = strtoupper($small);
+									if ($upper ==='HISTORICALFICTION')
+									{ $upper = 'HISTORICAL FICTION';}
+									
+									if ($upper ==='HUMORANDCOMEDY')
+									{ $upper = 'HUMOR AND COMEDY';}
+									
+									if ($upper ==='NONFICTION')
+									{ $upper = 'NON-FICTION';}
+									
+									if ($upper ==='SCIENCEFICTION')
+									{ $upper = 'SCIENCE FICTION';}
+									
+									if ($upper ==='SELFHELP')
+									{ $upper = 'SELF HELP';}
+									
+									if ($upper ==='YOUNGADULT')
+									{ $upper = 'YOUNG ADULT';}
 									
 								echo '<li><a href = "'.$small.'.php">';
 								echo $upper;
@@ -114,30 +114,29 @@ if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
 								$pos      = strripos($row[0], $sub1);
 								if ($pos != false) {
 									$small = substr($row[0], 0, $pos);
-									
-									if ($small === 'historicalfiction')
-									{ $small = 'historical fiction';}
-									
-									if ($small === 'humorandcomedy')
-									{ $small = 'humor and comedy';}
-									
-									if ($small === 'nonfiction')
-									{ $small = 'non-fiction';}
-									
-									if ($small === 'sciencefiction')
-									{ $small = 'science fiction';}
-									
-									if ($small === 'selfhelp')
-									{ $small = 'self help';}
-									
-									if ($small === 'youngadult')
-									{ $small = 'young adult';}
-									
 									$upper = strtoupper($small);
+									if ($upper ==='HISTORICALFICTION')
+									{ $upper = 'HISTORICAL FICTION';}
+									
+									if ($upper ==='HUMORANDCOMEDY')
+									{ $upper = 'HUMOR AND COMEDY';}
+									
+									if ($upper ==='NONFICTION')
+									{ $upper = 'NON-FICTION';}
+									
+									if ($upper ==='SCIENCEFICTION')
+									{ $upper = 'SCIENCE FICTION';}
+									
+									if ($upper ==='SELFHELP')
+									{ $upper = 'SELF HELP';}
+									
+									if ($upper ==='YOUNGADULT')
+									{ $upper = 'YOUNG ADULT';}
+									
 									
 									echo '<li class="cat_pic col-md-offset-1" data-category="'.$dc.'">';
 									echo '<div>';
-										echo '<a href="'.$small.'.php"><img src="assets/img/categories/'.$small.'.jpg" width = 150px alt='.$small.' /></a>';
+										echo '<a href="'.$small.'.php"><img src="assets/img/categories/'.$small.'.jpg" width = "150" alt='.$small.' /></a>';
 										echo '<h5>';
 											echo '<a href = "'.$small.'.php"><strong>';
 											echo $upper;

@@ -47,8 +47,8 @@
 
 			if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)){ //test for MSIE x.x;
 			 var ieversion=new Number(RegExp.$1) // capture x.x portion and store as a number
-			 if (ieversion<=8)
-			  window.location="ie.html"
+			 if (ieversion>=8)
+			  window.location="#"
 			}
 			else{
 			window.location="index.php"
@@ -64,41 +64,34 @@
 		<div id="content">
 			<table style="width:100%">
 				<tr>
-					<td><img src="assets/img/error.png" width="100px" /></td>
+					<td><img src="assets/img/error.png" width="100" alt="error_symbol" /></td>
 					<td>
 						Hey, how's it going?
 						<br>
 						<br>Looks like you are tring to access our website using an ancient browser. Currently, we do not support this browser and according to our web designer there are no plans to do so in the future. So, we request you to please install one of the supported browsers. 
 						<br><br>
 						
-					<td>
-				<tr>
-						
-						<table style="width:100%">
-						<p>Browsers that we currently support</p>
-							<tr>
-								<td><a href="https://www.mozilla.org/en-US/firefox/new/"><img src="https://mozorg.cdn.mozilla.net/media/img/firefox/new/header-firefox.png?2013-06" width="100px" /></a></td>
-								<td><a href="https://www.google.co.in/chrome/browser/"><img src="https://www.google.co.in/intl/en_in/chrome/assets/common/images/chrome_logo_2x.png" width="100px" /></td></a>
-								<td><a href="http://www.opera.com/computer/windows"><img src="assets/img/Opera-logo-PNG.png" width="100px" /></td></a>
-								<td><a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie"><img src="assets/img/ie10.jpg" width="100px" /></td></a>
-							</tr>
-							<tr>
-								<td><a href="https://www.mozilla.org/en-US/firefox/new/">Mozilla Firefox</a></td>
-								<td><a href="https://www.google.co.in/chrome/browser/">Google Chrome</a></td>
-								<td><a href="http://www.opera.com/computer/windows">&nbsp &nbsp &nbsp &nbsp Opera</a></td>
-								<td><a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">Internet Explorer 10+</a></td>
-							</tr>
-						</table>
-			
 					</td>
-		
 				</tr>
+			</table>		
+			
+			<table style="width:100%">
+				<p>Browsers that we currently support</p>
+					<tr>
+						<td><a href="https://www.mozilla.org/en-US/firefox/new/"><img src="https://mozorg.cdn.mozilla.net/media/img/firefox/new/header-firefox.png?2013-06" width="100" alt="Firefox_Logo" /></a></td>
+						<td><a href="https://www.google.co.in/chrome/browser/"><img src="https://www.google.co.in/intl/en_in/chrome/assets/common/images/chrome_logo_2x.png" width="100" alt="Chrome_Logo" /></td></a>
+						<td><a href="http://www.opera.com/computer/windows"><img src="assets/img/Opera-logo-PNG.png" width="100" alt="Opera_Logo" /></td></a>
+						<td><a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie"><img src="assets/img/ie10.jpg" width="100" alt="IE_Logo" /></td></a>
+					</tr>
+					<tr>
+						<td><a href="https://www.mozilla.org/en-US/firefox/new/">Mozilla Firefox</a></td>
+						<td><a href="https://www.google.co.in/chrome/browser/">Google Chrome</a></td>
+						<td><a href="http://www.opera.com/computer/windows">&nbsp; &nbsp; &nbsp; &nbsp; Opera</a></td>
+						<td><a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">Internet Explorer 10+</a></td>
+					</tr>
 			</table>
+			
 		</div>
 	</div>
-
-	
-				
-			
 </body>
 </html>

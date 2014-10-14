@@ -7,21 +7,21 @@ if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
 	{
 		if ($_SESSION['error']==0)
 		{?>
-			<script>
+			<script type="text/javascript">
 				alert("Incorrect Password");
 			</script>
 
 <?php 	}
 		if ($_SESSION['error']==1)
 		{ ?>
-			<script>
+			<script type="text/javascript">
 				alert("Email not found in database");
 			</script>
 
 <?php 	}
 		if ($_SESSION['error']==2)
 		{?>
-			<script>
+			<script type="text/javascript">
 			
 				alert("Please check your Email");
 			
@@ -29,7 +29,7 @@ if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
 <?php 	}
 		if ($_SESSION['error']==3)
 		{?>
-			<script>
+			<script type="text/javascript">
 			
 				alert("Already Registered");
 			
@@ -154,8 +154,8 @@ if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
 					<div class="col-lg-10">
 						<div class="navbar-collapse collapse">
 							<ul class="nav navbar-nav">
-								<li> <a href="#home" class="smoothScroll"><img src="assets/img/logo.png" width="25px" /></a></li>
-								<li> <a href="#home" class="smoothScroll">Home</a></li>
+								<li> <a href="#headerwrap" class="smoothScroll"><img src="assets/img/logo.png" width="25" alt="logo" /></a></li>
+								<li> <a href="#headerwrap" class="smoothScroll">Home</a></li>
 								<li> <a href="#about" class="smoothScroll"> About</a></li>
 								<li> <a href="#services" class="smoothScroll"> Services</a></li>
 								<li> <a href="#team" class="smoothScroll"> Team</a></li>
@@ -174,10 +174,10 @@ if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
 
 		
 		<!-- ==== HEADERWRAP ==== -->
-	    <div id="headerwrap" id="home" name="home">
+	    <div id="headerwrap" name="home">
 			<header class="clearfix">
 	  		 		<header class="clearfix">
-	  		 		<h1><span class="logo"><img src="assets/img/logo.png" width="100px" alt="Header Image" /></span></h1>
+	  		 		<h1><span class="logo"><img src="assets/img/logo.png" width="100" alt="Header Image" /></span></h1>
 
 	  		 		<p>Readers Junction</p>
 	  		 		<p>Books and Magazines on Rent</p>	 
@@ -185,15 +185,15 @@ if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
 					<div class="social-widget">
 						<div id="themify-social-links-2" class="widget"><ul class="social-links">
 							<li class="social-link-item twitter">
-								<a href="https://twitter.com/" title="Twitter"><img src="assets/img/twitter.png" width="32"> </a>
+								<a href="https://twitter.com/" title="Twitter"><img src="assets/img/twitter.png" width="32" alt="twitter" /> </a>
 							</li>
 							
 							<li class="social-link-item facebook">
-								<a href="https://www.facebook.com/" title="Facebook"><img src="assets/img/facebook.png" width="32"> </a>
+								<a href="https://www.facebook.com/" title="Facebook"><img src="assets/img/facebook.png" width="32" alt="Facebook" /> </a>
 							</li>
 							
 							<li class="social-link-item facebook">
-								<a href="https://plus.google.com/" title="Google+"><img src="assets/img/g+.png" width="32"> </a>
+								<a href="https://plus.google.com/" title="Google+"><img src="assets/img/g+.png" width="32" alt="Google+" > </a>
 							</li>
 							</ul>
 						</div>
@@ -243,23 +243,23 @@ if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
 					<a id="signup" href="#modal" name="signup" rel="leanModal"><h1>BOOKS</h1></a>
 					<!-- ?php require_once('carouselData.php') ? -->
 					<div id="carousel">
-						<a id="signup" href="#modal" name="signup" rel="leanModal"><span class="dropt" title="Book Details"><img src="assets/img/books/1.jpg" id="item-1" /><span style="width:200px; height:230px;"><b> Book Details:</b><br><br>Name: SOME NAME <br> Author: SOME AUTHOR <br> Rating: 3/5 <br>Rent: 30</span></span></a>
+						<a id="signup" href="#modal" name="signup" rel="leanModal"><span class="dropt" title="Book Details"><img src="assets/img/books/1.jpg" id="item-1" alt="item-1" /><span style="width:200px; height:230px;"><b> Book Details:</b><br><br>Name: SOME NAME <br> Author: SOME AUTHOR <br> Rating: 3/5 <br>Rent: 30</span></a>
 						
-						<a id="signup" href="#modal" name="signup" rel="leanModal"><span class="dropt" title="Book Details"><img src="assets/img/books/2.jpg" id="item-2" /><span style="width:200px; height:230px;"><b> Book Details:</b><br><br>Name: SOME NAME2 <br> Author: SOME AUTHOR <br> Rating: 3/5 <br>Rent: 30</span></span></a>
+						<a id="signup" href="#modal" name="signup" rel="leanModal"><span class="dropt" title="Book Details"><img src="assets/img/books/2.jpg" id="item-2" alt="item-2" /><span style="width:200px; height:230px;"><b> Book Details:</b><br><br>Name: SOME NAME2 <br> Author: SOME AUTHOR <br> Rating: 3/5 <br>Rent: 30</span></a>
 						
-						<a id="signup" href="#modal" name="signup" rel="leanModal"><span class="dropt" title="Book Details"><img src="assets/img/books/3.jpg" id="item-3" /><span style="width:200px; height:230px;"><b> Book Details:</b><br><br>Name: SOME NAME3 <br> Author: SOME AUTHOR <br> Rating: 3/5 <br>Rent: 30</span></span></a>
+						<a id="signup" href="#modal" name="signup" rel="leanModal"><span class="dropt" title="Book Details"><img src="assets/img/books/3.jpg" id="item-3" alt="item-3" /><span style="width:200px; height:230px;"><b> Book Details:</b><br><br>Name: SOME NAME3 <br> Author: SOME AUTHOR <br> Rating: 3/5 <br>Rent: 30</span></a>
 						
-						<a id="signup" href="#modal" name="signup" rel="leanModal"><span class="dropt" title="Book Details"><img src="assets/img/books/4.jpg" id="item-4" /><span style="width:200px; height:230px;"><b> Book Details:</b><br><br>Name: SOME NAME4 <br> Author: SOME AUTHOR <br> Rating: 3/5 <br>Rent: 30</span></span></a>
+						<a id="signup" href="#modal" name="signup" rel="leanModal"><span class="dropt" title="Book Details"><img src="assets/img/books/4.jpg" id="item-4" alt="item-4" /><span style="width:200px; height:230px;"><b> Book Details:</b><br><br>Name: SOME NAME4 <br> Author: SOME AUTHOR <br> Rating: 3/5 <br>Rent: 30</span></a>
 						
-						<a id="signup" href="#modal" name="signup" rel="leanModal"><span class="dropt" title="Book Details"><img src="assets/img/books/5.jpg" id="item-5" /><span style="width:200px; height:230px;"><b> Book Details:</b><br><br>Name: SOME NAME5 <br> Author: SOME AUTHOR <br> Rating: 3/5 <br>Rent: 30</span></span></a>
+						<a id="signup" href="#modal" name="signup" rel="leanModal"><span class="dropt" title="Book Details"><img src="assets/img/books/5.jpg" id="item-5" alt="item-5" /><span style="width:200px; height:230px;"><b> Book Details:</b><br><br>Name: SOME NAME5 <br> Author: SOME AUTHOR <br> Rating: 3/5 <br>Rent: 30</span></a>
 						
-						<a id="signup" href="#modal" name="signup" rel="leanModal"><span class="dropt" title="Book Details"><img src="assets/img/books/6.jpg" id="item-6" /><span style="width:200px; height:230px;"><b> Book Details:</b><br><br>Name: SOME NAME6 <br> Author: SOME AUTHOR <br> Rating: 3/5 <br>Rent: 30</span></span></a>
+						<a id="signup" href="#modal" name="signup" rel="leanModal"><span class="dropt" title="Book Details"><img src="assets/img/books/6.jpg" id="item-6" alt="item-6" /><span style="width:200px; height:230px;"><b> Book Details:</b><br><br>Name: SOME NAME6 <br> Author: SOME AUTHOR <br> Rating: 3/5 <br>Rent: 30</span></a>
 						
-						<a id="signup" href="#modal" name="signup" rel="leanModal"><span class="dropt" title="Book Details"><img src="assets/img/books/7.jpg" id="item-7" /><span style="width:200px; height:230px;"><b> Book Details:</b><br><br>Name: SOME NAME7 <br> Author: SOME AUTHOR <br> Rating: 3/5 <br>Rent: 30</span></span></a>
+						<a id="signup" href="#modal" name="signup" rel="leanModal"><span class="dropt" title="Book Details"><img src="assets/img/books/7.jpg" id="item-7" alt="item-7" /><span style="width:200px; height:230px;"><b> Book Details:</b><br><br>Name: SOME NAME7 <br> Author: SOME AUTHOR <br> Rating: 3/5 <br>Rent: 30</span></a>
 						
-						<a id="signup" href="#modal" name="signup" rel="leanModal"><span class="dropt" title="Book Details"><img src="assets/img/books/8.jpg" id="item-8" /><span style="width:200px; height:230px;"><b> Book Details:</b><br><br>Name: SOME NAME8 <br> Author: SOME AUTHOR <br> Rating: 3/5 <br>Rent: 30</span></span></a>
+						<a id="signup" href="#modal" name="signup" rel="leanModal"><span class="dropt" title="Book Details"><img src="assets/img/books/8.jpg" id="item-8" alt="item-8" /><span style="width:200px; height:230px;"><b> Book Details:</b><br><br>Name: SOME NAME8 <br> Author: SOME AUTHOR <br> Rating: 3/5 <br>Rent: 30</span></a>
 						
-						<a id="signup" href="#modal" name="signup" rel="leanModal"><span class="dropt" title="Book Details"><img src="assets/img/books/9.jpg" id="item-9" /><span style="width:200px; height:230px;"><b> Book Details:</b><br><br>Name: SOME NAME9 <br> Author: SOME AUTHOR <br> Rating: 3/5 <br>Rent: 30</span></span></a>
+						<a id="signup" href="#modal" name="signup" rel="leanModal"><span class="dropt" title="Book Details"><img src="assets/img/books/9.jpg" id="item-9" alt="item-9" /><span style="width:200px; height:230px;"><b> Book Details:</b><br><br>Name: SOME NAME9 <br> Author: SOME AUTHOR <br> Rating: 3/5 <br>Rent: 30</span></a>
 					</div>
 					<!--<a href="#" id="cPrev">Prev</a> | <a href="#" id="cNext">Next</a> -->
 
@@ -296,7 +296,7 @@ if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
 				<br>
 				<br>
 				<div class="col-lg-4 centered">
-					<img class="img img-circle" src="assets/img/team/team01.jpg" height="120px" width="120px" alt="">
+					<img class="img img-circle" src="assets/img/team/team01.jpg" height="120" width="120" alt="">
 					<br>
 					<h4><b>Mike Arney</b></h4>
 					<a href="#" class="icon icon-twitter"></a>
@@ -307,7 +307,7 @@ if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
 
 				
 				<div class="col-lg-4 centered">
-					<img class="img img-circle" src="assets/img/team/team01.jpg" height="120px" width="120px" alt="">
+					<img class="img img-circle" src="assets/img/team/team01.jpg" height="120" width="120" alt="">
 					<br>
 					<h4><b>Mike Arney</b></h4>
 					<a href="#" class="icon icon-twitter"></a>
@@ -318,7 +318,7 @@ if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
 
 				
 				<div class="col-lg-4 centered">
-					<img class="img img-circle" src="assets/img/team/team01.jpg" height="120px" width="120px" alt="">
+					<img class="img img-circle" src="assets/img/team/team01.jpg" height="120" width="120" alt="">
 					<br>
 					<h4><b>Mike Arney</b></h4>
 					<a href="#" class="icon icon-twitter"></a>
@@ -329,7 +329,7 @@ if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
 
 				
 				<div class="col-lg-4 centered">
-					<img class="img img-circle" src="assets/img/team/team01.jpg" height="120px" width="120px" alt="">
+					<img class="img img-circle" src="assets/img/team/team01.jpg" height="120" width="120" alt="">
 					<br>
 					<h4><b>Mike Arney</b></h4>
 					<a href="#" class="icon icon-twitter"></a>
@@ -340,7 +340,7 @@ if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
 
 				
 				<div class="col-lg-4 centered">
-					<img class="img img-circle" src="assets/img/team/team01.jpg" height="120px" width="120px" alt="">
+					<img class="img img-circle" src="assets/img/team/team01.jpg" height="120" width="120" alt="">
 					<br>
 					<h4><b>Mike Arney</b></h4>
 					<a href="#" class="icon icon-twitter"></a>
@@ -401,18 +401,18 @@ if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
 									<textarea name="message" rows="3" class="form-control" id="input_message" placeholder="Message..."></textarea><br>
 									<button type="submit" class="btn btn-primary pull-right">SEND</button>
 								</div>
+							</div>
 							
 						</form><!-- form -->
 					</p>
 				</div>
-				</div><!-- row -->
+			</div><!-- row -->
 				
-				<div id="gmap" class="col-lg-4">
+			<div id="gmap" class="col-lg-4">
 				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30450.929390155332!2d78.4253165!3d17.4421795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x55688a47709711ac!2sRBI+Staff+Quarters!5e0!3m2!1sen!2sin!4v1411936866687" width="350" height="290" frameborder="0" style="border:0"></iframe>
 			</div><!-- container -->
 		</div>
-		</div>
-
+		
 		
 		<!-- ==== FOOTER ==== -->
 		<div id="footerwrap">
@@ -471,7 +471,7 @@ if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
 
 						<div class="action_btns">
 							<div class="one_half"><a href="#" class="btn back_btn">Back</a></div>
-							<div class="one_half last"><input type="submit" class="btn btn_red" value="login" name="login"></div>
+							<div class="one_half last"><input type="submit" class="btn btn_red" value="Login" name="login" /></div>
 						</div>
 					</form>
 					<a href="#" class="forgot_password">Forgot password?</a>

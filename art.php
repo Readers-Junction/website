@@ -156,7 +156,7 @@
 								<?php $info= mysql_fetch_array( $data ) ?>
 								<li class="book_pic col-md-offset-1">
 									<div>
-										<a href="#"><img src="images/categories/'<?php echo ucwords($info['isbn10']); ?>'.jpg" width = 150px alt="<?php echo ucwords($info['book_name']); ?>" /></a> <br>
+										<a href="#"><img src="images/categories/'<?php echo ucwords($info['isbn10']); ?>'.jpg" width = "150" alt="<?php echo ucwords($info['book_name']); ?>" /></a> <br>
 										<a href="#"><strong><?php echo ucwords($info['book_name']); ?> </strong>
 										<br> by <?php echo ucwords($info['author']); ?></a>
 									</div>
@@ -165,7 +165,7 @@
 								<?php $info= mysql_fetch_array( $data ) ?>
 								<li class="book_pic col-md-offset-1">
 									<div>
-										<a href="#"><img src="images/categories/'<?php echo ucwords($info['isbn10']); ?>'.jpg" width = 150px alt="<?php echo ucwords($info['book_name']); ?>" /></a> <br>
+										<a href="#"><img src="images/categories/'<?php echo ucwords($info['isbn10']); ?>'.jpg" width = "150" alt="<?php echo ucwords($info['book_name']); ?>" /></a> <br>
 										
 													<a href="#"><strong><?php echo ucwords($info['book_name']); ?> </strong> <br> by <?php echo ucwords($info['author']); ?> </a>
 												
@@ -175,7 +175,7 @@
 								<?php $info= mysql_fetch_array( $data ) ?>
 								<li class="book_pic col-md-offset-1">
 									<div>
-										<a href="#"><img src="images/categories/'<?php echo ucwords($info['isbn10']); ?>'.jpg" width = 150px alt="<?php echo ucwords($info['book_name']); ?>" /></a> <br>
+										<a href="#"><img src="images/categories/'<?php echo ucwords($info['isbn10']); ?>'.jpg" width = "150" alt="<?php echo ucwords($info['book_name']); ?>" /></a> <br>
 											
 												<a href="#"><strong><?php echo ucwords($info['book_name']); ?> </strong> <br> by <?php echo ucwords($info['author']); ?> </a>
 											
@@ -185,7 +185,7 @@
 								<?php $info= mysql_fetch_array( $data ) ?>
 								<li class="book_pic col-md-offset-1">
 									<div>
-										<a href="#"><img src="images/categories/'<?php echo ucwords($info['isbn10']); ?>'.jpg" width = 150px alt="<?php echo ucwords($info['book_name']); ?>" /></a> <br>
+										<a href="#"><img src="images/categories/'<?php echo ucwords($info['isbn10']); ?>'.jpg" width = "150" alt="<?php echo ucwords($info['book_name']); ?>" /></a> <br>
 										
 													<a href="#"><strong><?php echo ucwords($info['book_name']); ?> </strong> <br> by <?php echo ucwords($info['author']); ?></a>
 												
@@ -195,7 +195,7 @@
 								<?php $info= mysql_fetch_array( $data ) ?>
 								<li class="book_pic col-md-offset-1">
 									<div>
-										<a href="#"><img src="images/categories/'<?php echo ucwords($info['isbn10']); ?>'.jpg" width = 150px alt="<?php echo ucwords($info['book_name']); ?>" /></a> <br>
+										<a href="#"><img src="images/categories/'<?php echo ucwords($info['isbn10']); ?>'.jpg" width = "150" alt="<?php echo ucwords($info['book_name']); ?>" /></a> <br>
 										
 													<a href="#"><strong><?php echo ucwords($info['book_name']); ?> </strong> <br> by <?php echo ucwords($info['author']); ?> </a>
 												
@@ -205,7 +205,7 @@
 								<?php $info= mysql_fetch_array( $data ) ?>
 								<li class="book_pic col-md-offset-1">
 									<div>
-										<a href="#"><img src="images/categories/'<?php echo ucwords($info['isbn10']); ?>'.jpg" width = 150px alt="<?php echo ucwords($info['book_name']); ?>" /></a> <br>
+										<a href="#"><img src="images/categories/'<?php echo ucwords($info['isbn10']); ?>'.jpg" width = "150" alt="<?php echo ucwords($info['book_name']); ?>" /></a> <br>
 										
 													<a href="#"><strong><?php echo ucwords($info['book_name']); ?> </strong> <br> by <?php echo ucwords($info['author']); ?> </a>
 												
@@ -215,7 +215,7 @@
 								<?php $info= mysql_fetch_array( $data ) ?>
 								<li class="book_pic col-md-offset-1">
 									<div>
-										<a href="#"><img src="images/categories/'<?php echo ucwords($info['isbn10']); ?>'.jpg" width = 150px alt="<?php echo ucwords($info['book_name']); ?>" /></a> <br>
+										<a href="#"><img src="images/categories/'<?php echo ucwords($info['isbn10']); ?>'.jpg" width = "150" alt="<?php echo ucwords($info['book_name']); ?>" /></a> <br>
 										
 													<a href="#"><strong><?php echo ucwords($info['book_name']); ?> </strong> <br> by <?php echo ucwords($info['author']); ?> </a>
 												
@@ -225,7 +225,7 @@
 								<?php $info= mysql_fetch_array( $data ) ?>
 								<li class="book_pic col-md-offset-1">
 									<div>
-										<a href="#"><img src="images/categories/'<?php echo ucwords($info['isbn10']); ?>'.jpg" width = 150px alt="<?php echo ucwords($info['book_name']); ?>" /></a> <br>
+										<a href="#"><img src="images/categories/'<?php echo ucwords($info['isbn10']); ?>'.jpg" width = "150" alt="<?php echo ucwords($info['book_name']); ?>" /></a> <br>
 										
 													<a href="#"><strong><?php echo ucwords($info['book_name']); ?> </strong> <br> by <?php echo ucwords($info['author']); ?> </a>
 												
@@ -235,7 +235,7 @@
 								<?php $info= mysql_fetch_array( $data ) ?>
 								<li class="book_pic col-md-offset-1">
 									<div>
-										<a href="#"><img src="images/categories/'<?php echo ucwords($info['isbn10']); ?>'.jpg" width = 150px alt="<?php echo ucwords($info['book_name']); ?>" /></a> <br>
+										<a href="#"><img src="images/categories/'<?php echo ucwords($info['isbn10']); ?>'.jpg" width = "150" alt="<?php echo ucwords($info['book_name']); ?>" /></a> <br>
 										
 													<a href="#"><strong><?php echo ucwords($info['book_name']); ?> </strong> <br> by <?php echo ucwords($info['author']); ?> </a>
 												
@@ -245,7 +245,7 @@
 								<?php $info= mysql_fetch_array( $data ) ?>
 								<li class="book_pic col-md-offset-1">
 									<div>
-										<a href="#"><img src="images/categories/'<?php echo ucwords($info['isbn10']); ?>'.jpg" width = 150px alt="<?php echo ucwords($info['book_name']); ?>" /></a> <br>
+										<a href="#"><img src="images/categories/'<?php echo ucwords($info['isbn10']); ?>'.jpg" width = "150" alt="<?php echo ucwords($info['book_name']); ?>" /></a> <br>
 										
 													<a href="#"><strong><?php echo ucwords($info['book_name']); ?> </strong> <br> by <?php echo ucwords($info['author']); ?> </a>
 												
@@ -255,7 +255,7 @@
 								<?php $info= mysql_fetch_array( $data ) ?>
 								<li class="book_pic col-md-offset-1">
 									<div>
-										<a href="#"><img src="images/categories/'<?php echo ucwords($info['isbn10']); ?>'.jpg" width = 150px alt="<?php echo ucwords($info['book_name']); ?>" /></a> <br>
+										<a href="#"><img src="images/categories/'<?php echo ucwords($info['isbn10']); ?>'.jpg" width = "150" alt="<?php echo ucwords($info['book_name']); ?>" /></a> <br>
 										
 													<a href="#"><strong><?php echo ucwords($info['book_name']); ?> </strong> <br> by <?php echo ucwords($info['author']); ?> </a>
 												
@@ -265,7 +265,7 @@
 								<?php $info= mysql_fetch_array( $data ) ?>
 								<li class="book_pic col-md-offset-1">
 									<div>
-										<a href="#"><img src="images/categories/'<?php echo ucwords($info['isbn10']); ?>'.jpg" width = 150px alt="<?php echo ucwords($info['book_name']); ?>" /></a> <br>
+										<a href="#"><img src="images/categories/'<?php echo ucwords($info['isbn10']); ?>'.jpg" width = "150" alt="<?php echo ucwords($info['book_name']); ?>" /></a> <br>
 										
 													<a href="#"><strong><?php echo ucwords($info['book_name']); ?> </strong> <br> by <?php echo ucwords($info['author']); ?> </a>
 												
@@ -275,7 +275,7 @@
 								<?php $info= mysql_fetch_array( $data ) ?>
 								<li class="book_pic col-md-offset-1">
 									<div>
-										<a href="#"><img src="images/categories/'<?php echo ucwords($info['isbn10']); ?>'.jpg" width = 150px alt="<?php echo ucwords($info['book_name']); ?>" /></a> <br>
+										<a href="#"><img src="images/categories/'<?php echo ucwords($info['isbn10']); ?>'.jpg" width = "150" alt="<?php echo ucwords($info['book_name']); ?>" /></a> <br>
 										
 													<a href="#"><strong><?php echo ucwords($info['book_name']); ?> </strong> <br> by <?php echo ucwords($info['author']); ?> </a>
 												
@@ -285,7 +285,7 @@
 								<?php $info= mysql_fetch_array( $data ) ?>
 								<li class="book_pic col-md-offset-1">
 									<div>
-										<a href="#"><img src="images/categories/'<?php echo ucwords($info['isbn10']); ?>'.jpg" width = 150px alt="<?php echo ucwords($info['book_name']); ?>" /></a> <br>
+										<a href="#"><img src="images/categories/'<?php echo ucwords($info['isbn10']); ?>'.jpg" width = "150" alt="<?php echo ucwords($info['book_name']); ?>" /></a> <br>
 										
 													<a href="#"><strong><?php echo ucwords($info['book_name']); ?> </strong> <br> by <?php echo ucwords($info['author']); ?> </a>
 												
@@ -295,7 +295,7 @@
 								<?php $info= mysql_fetch_array( $data ) ?>
 								<li class="book_pic col-md-offset-1">
 									<div>
-										<a href="#"><img src="images/categories/'<?php echo ucwords($info['isbn10']); ?>'.jpg" width = 150px alt="<?php echo ucwords($info['book_name']); ?>" /></a> <br>
+										<a href="#"><img src="images/categories/'<?php echo ucwords($info['isbn10']); ?>'.jpg" width = "150" alt="<?php echo ucwords($info['book_name']); ?>" /></a> <br>
 										
 													<a href="#"><strong><?php echo ucwords($info['book_name']); ?> </strong> <br> by <?php echo ucwords($info['author']); ?> </a>
 												
@@ -305,7 +305,7 @@
 								<?php $info= mysql_fetch_array( $data ) ?>
 								<li class="book_pic col-md-offset-1">
 									<div>
-										<a href="#"><img src="images/categories/'<?php echo ucwords($info['isbn10']); ?>'.jpg" width = 150px alt="<?php echo ucwords($info['book_name']); ?>" /></a> <br>
+										<a href="#"><img src="images/categories/'<?php echo ucwords($info['isbn10']); ?>'.jpg" width = "150" alt="<?php echo ucwords($info['book_name']); ?>" /></a> <br>
 										
 													<a href="#"><strong><?php echo ucwords($info['book_name']); ?> </strong> <br> by <?php echo ucwords($info['author']); ?> </a>
 												
@@ -315,7 +315,7 @@
 								<?php $info= mysql_fetch_array( $data ) ?>
 								<li class="book_pic col-md-offset-1">
 									<div>
-										<a href="#"><img src="images/categories/'<?php echo ucwords($info['isbn10']); ?>'.jpg" width = 150px alt="<?php echo ucwords($info['book_name']); ?>" /></a> <br>
+										<a href="#"><img src="images/categories/'<?php echo ucwords($info['isbn10']); ?>'.jpg" width = "150" alt="<?php echo ucwords($info['book_name']); ?>" /></a> <br>
 										
 													<a href="#"><strong><?php echo ucwords($info['book_name']); ?> </strong> <br> by <?php echo ucwords($info['author']); ?> </a>
 												
@@ -325,7 +325,7 @@
 								<?php $info= mysql_fetch_array( $data ) ?>
 								<li class="book_pic col-md-offset-1">
 									<div>
-										<a href="#"><img src="images/categories/'<?php echo ucwords($info['isbn10']); ?>'.jpg" width = 150px alt="<?php echo ucwords($info['book_name']); ?>" /></a> <br>
+										<a href="#"><img src="images/categories/'<?php echo ucwords($info['isbn10']); ?>'.jpg" width = "150" alt="<?php echo ucwords($info['book_name']); ?>" /></a> <br>
 										
 													<a href="#"><strong><?php echo ucwords($info['book_name']); ?> </strong> <br> by <?php echo ucwords($info['author']); ?> </a>
 												
@@ -335,7 +335,7 @@
 								<?php $info= mysql_fetch_array( $data ) ?>
 								<li class="book_pic col-md-offset-1">
 									<div>
-										<a href="#"><img src="images/categories/'<?php echo ucwords($info['isbn10']); ?>'.jpg" width = 150px alt="<?php echo ucwords($info['book_name']); ?>" /></a> <br>
+										<a href="#"><img src="images/categories/'<?php echo ucwords($info['isbn10']); ?>'.jpg" width = "150" alt="<?php echo ucwords($info['book_name']); ?>" /></a> <br>
 										
 													<a href="#"><strong><?php echo ucwords($info['book_name']); ?> </strong> <br> by <?php echo ucwords($info['author']); ?> </a>
 												
@@ -345,7 +345,7 @@
 								<?php $info= mysql_fetch_array( $data ) ?>
 								<li class="book_pic col-md-offset-1">
 									<div>
-										<a href="#"><img src="images/categories/'<?php echo ucwords($info['isbn10']); ?>'.jpg" width = 150px alt="<?php echo ucwords($info['book_name']); ?>" /></a> <br>
+										<a href="#"><img src="images/categories/'<?php echo ucwords($info['isbn10']); ?>'.jpg" width = "150" alt="<?php echo ucwords($info['book_name']); ?>" /></a> <br>
 										
 													<a href="#"><strong><?php echo ucwords($info['book_name']); ?> </strong> <br> by <?php echo ucwords($info['author']); ?> </a>
 												

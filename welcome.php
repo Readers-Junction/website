@@ -5,7 +5,6 @@ if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
 	}
 
 ?>
-<html>
 <!DOCTYPE html>
 <html lang="en">
 <head>
