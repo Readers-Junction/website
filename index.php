@@ -151,7 +151,7 @@ if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
 		<div id="navbar-main">
 			<div class="navbar navbar-inverse navbar-fixed-top">
 				<div class="container">
-					<div class="col-lg-10">
+					<div class="col-lg-10 col-sm-10 col-xs-9 col-md-10">
 						<div class="navbar-collapse collapse">
 							<ul class="nav navbar-nav">
 								<li> <a href="#headerwrap" class="smoothScroll"><img src="assets/img/logo.png" width="25" alt="logo" /></a></li>
@@ -163,7 +163,7 @@ if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
 							</ul>
 						</div><!--/.nav-collapse -->
 					</div>
-					<div class="col-lg-2">
+					<div class="col-lg-2 col-sm-2 col-xs-3 col-md-2">
 						<ul class="nav navbar-nav">
 								<li><a id="signup" href="#modal" name="signup" rel="leanModal">Log In </a></li>
 						</ul>
@@ -172,7 +172,7 @@ if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
 			</div>
 		</div>
 
-		
+
 		<!-- ==== HEADERWRAP ==== -->
 	    <div id="headerwrap" name="home">
 			<header class="clearfix">
@@ -180,6 +180,7 @@ if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
 	  		 		<h1><span class="logo"><img src="assets/img/logo.png" width="100" alt="Header Image" /></span></h1>
 
 	  		 		<p>Readers Junction</p>
+					
 	  		 		<p>Books and Magazines on Rent</p>	 
 					
 					<div class="social-widget">
@@ -202,7 +203,7 @@ if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
 				</header>
 	  		</header> 
 	    </div><!-- /headerwrap -->
-
+		
 		
 		<!-- ==== ABOUT ==== -->
 		<div class="container" id="about" name="about">
@@ -238,7 +239,7 @@ if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
 				<h2 class="centered">OUR SERVICES.</h2>
 				<hr>
 				<br>
-				<div class="col-lg-offset-2 col-lg-8">
+				<div class="col-lg-offset-2 col-lg-10 col-md-offset-2 col-md-10 col-sm-offset-2 col-sm-10 col-xs-11 col-xs-offset-1">
 					
 					<a id="signup" href="#modal" name="signup" rel="leanModal"><h1>BOOKS</h1></a>
 					<!-- ?php require_once('carouselData.php') ? -->
@@ -295,7 +296,7 @@ if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
 				<hr>
 				<br>
 				<br>
-				<div class="col-lg-4 centered">
+				<div class="col-lg-4 col-sm-4 col-md-4 centered">
 					<img class="img img-circle" src="assets/img/team/team01.jpg" height="120" width="120" alt="">
 					<br>
 					<h4><b>Mike Arney</b></h4>
@@ -306,7 +307,7 @@ if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
 				</div><!-- col-lg-3 -->
 
 				
-				<div class="col-lg-4 centered">
+				<div class="col-lg-4 col-sm-4 col-md-4 centered">
 					<img class="img img-circle" src="assets/img/team/team01.jpg" height="120" width="120" alt="">
 					<br>
 					<h4><b>Mike Arney</b></h4>
@@ -317,7 +318,7 @@ if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
 				</div><!-- col-lg-3 -->
 
 				
-				<div class="col-lg-4 centered">
+				<div class="col-lg-4 col-sm-4 col-md-4 centered">
 					<img class="img img-circle" src="assets/img/team/team01.jpg" height="120" width="120" alt="">
 					<br>
 					<h4><b>Mike Arney</b></h4>
@@ -328,7 +329,7 @@ if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
 				</div><!-- col-lg-3 -->
 
 				
-				<div class="col-lg-4 centered">
+				<div class="col-lg-4 col-sm-4 col-md-4 centered">
 					<img class="img img-circle" src="assets/img/team/team01.jpg" height="120" width="120" alt="">
 					<br>
 					<h4><b>Mike Arney</b></h4>
@@ -339,7 +340,7 @@ if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
 				</div><!-- col-lg-3 -->
 
 				
-				<div class="col-lg-4 centered">
+				<div class="col-lg-4 col-sm-4 col-md-4 centered">
 					<img class="img img-circle" src="assets/img/team/team01.jpg" height="120" width="120" alt="">
 					<br>
 					<h4><b>Mike Arney</b></h4>
@@ -373,7 +374,7 @@ if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
 				<hr>
 				<br>
 				<br>
-				<div class="col-lg-4">
+				<div class="col-lg-4 col-sm-4 col-md-4">
 					<h3>Contact Address</h3>
 					<p><span class="icon icon-home"></span> Some Address 987, NY<br/>
 						<span class="icon icon-phone"></span> +34 9884 4893 <br/>
@@ -384,7 +385,7 @@ if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
 					</p>
 				</div><!-- col -->
 				
-				<div class="col-lg-4">
+				<div class="col-lg-4 col-sm-4 col-md-4">
 					<h3>Queries</h3>
 					<p>
 						<form class="form-horizontal" role="form" method="post">
@@ -408,7 +409,7 @@ if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
 				</div>
 			
 				
-				<div id="gmap" class="col-lg-4">
+				<div id="gmap" class="col-lg-4 col-sm-4 col-md-4">
 					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30450.929390155332!2d78.4253165!3d17.4421795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x55688a47709711ac!2sRBI+Staff+Quarters!5e0!3m2!1sen!2sin!4v1411936866687" width="350" height="290" frameborder="0" style="border:0"></iframe>
 				</div>
 			</div><!-- row -->
