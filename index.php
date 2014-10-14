@@ -421,7 +421,7 @@ if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
 				<!-- Social Login -->
 				<div class="social_login">
 					<div class="">
-						<a href="#" class="social_box fb">
+						<a href="fbLogin/fb.html" class="social_box fb">
 							<span class="icon"><i class="icon icon-facebook"></i></span>
 							<span class="icon_title">Connect with Facebook</span>
 						</a>
