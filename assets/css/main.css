@@ -95,22 +95,6 @@ margin-left: -15px;
 }
 
 
-.navbar-default {
-border-color: transparent;
-background-color: #dadada;
-}
-
-
-.navbar-toggle {
-border-color: transparent;
-border: 0px solid transparent;
-}
-
-.navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus {
-	background-color: #16a085;
-	color: white;
-}
 
 
 hr {

@@ -51,6 +51,8 @@ if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
 
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+	<link href="assets/css/bootstrap-theme.min.css" rel="stylesheet" >
 
     <!-- Other CSS-->
     <link href="assets/css/main.css" rel="stylesheet">
@@ -69,7 +71,9 @@ if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
       <script src="assets/js/html5shiv.js"></script>
       <script src="assets/js/respond.min.js"></script>
     <![endif]-->
-	
+			<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+			<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+			
   </head>
 
   <body>
@@ -147,31 +151,42 @@ if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
 			}
 
 		</script>
-		<!-- ==== NAVIGATION BAR ==== -->
+		
 		<div id="navbar-main">
-			<div class="navbar navbar-inverse navbar-fixed-top">
+			<nav class="navbar navbar-inverse navbar-fixed-top">
 				<div class="container">
-					<div class="col-lg-10 col-sm-10 col-xs-9 col-md-10">
-						<div class="navbar-collapse collapse">
-							<ul class="nav navbar-nav">
-								<li> <a href="#headerwrap" class="smoothScroll"><img src="assets/img/logo.png" width="25" alt="logo" /></a></li>
-								<li> <a href="#headerwrap" class="smoothScroll">Home</a></li>
-								<li> <a href="#about" class="smoothScroll"> About</a></li>
-								<li> <a href="#services" class="smoothScroll"> Services</a></li>
-								<li> <a href="#team" class="smoothScroll"> Team</a></li>
-								<li> <a href="#contact" class="smoothScroll"> Contact</a></li>
-							</ul>
-						</div><!--/.nav-collapse -->
-					</div>
-					<div class="col-lg-2 col-sm-2 col-xs-3 col-md-2">
-						<ul class="nav navbar-nav">
-								<li><a id="signup" href="#modal" name="signup" rel="leanModal">Log In </a></li>
-						</ul>
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-target="#navbarCollapse" data-toggle="collapse" >
+						
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#headerwrap"><b><img src="assets/img/logo.png" width="25" alt="logo" /> &nbsp; Readers' Junction</b></a>
+				</div>
+				<div id="navbarCollapse" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li> <a href="#headerwrap" class="smoothScroll">Home</a></li>
+						<li> <a href="#about" class="smoothScroll"> About</a></li>
+						<li> <a href="#services" class="smoothScroll"> Services</a></li>
+						<li> <a href="#team" class="smoothScroll"> Team</a></li>
+						<li> <a href="#contact" class="smoothScroll"> Contact</a></li>
+					</ul>
+					<div class="navbar-header navbar-right">
+						<p class="navbar-text">
+							<a id="signup" href="#modal" name="signup" rel="leanModal">Log In </a>
+						</p>
 					</div>
 				</div>
-			</div>
+				</div>
+			</nav>
 		</div>
-
+			
+		<script type="text/javascript">
+			$('.navbar-collapse a').click(function(){
+			$(".navbar-collapse").collapse('hide');
+			});
+		</script>
 
 		<!-- ==== HEADERWRAP ==== -->
 	    <div id="headerwrap" name="home">
@@ -515,8 +530,7 @@ if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
 		<!-- ==== JAVASCRIPT ==== -->
 		<!-- Placed at the end of the document so the pages load faster -->
 			
-		<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+		
 		<script type="text/javascript" src="assets/js/jquery-func.js"></script>
 		<script type="text/javascript" src="assets/js/jquery.leanModal.min.js"></script>
 		<script type="text/javascript" src="assets/js/retina.js"></script>

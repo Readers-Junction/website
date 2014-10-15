@@ -17,41 +17,54 @@ if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
 
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+	<link href="assets/css/bootstrap-theme.min.css" rel="stylesheet" >
 	
 	<!-- Other CSS -->
 	<link rel="stylesheet" href="assets/css/icomoon.css">
 	<link rel="stylesheet" href="assets/css/welcome.css">
 	
+	<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
 </head>
 
 <body>
 		<!-- ==== NAVIGATION BAR ==== -->
+
 		<div id="navbar-main">
-			<div class="navbar navbar-inverse navbar-fixed-top">
+			<nav class="navbar navbar-inverse navbar-fixed-top">
 				<div class="container">
-					<div class="col-md-9">
-						<div class="navbar-collapse collapse">
-							<ul class="nav navbar-nav">
-								<li><a href="welcome.php" class="smoothScroll">Home</a></li>
-								<li> <a href="books.html" class="smoothScroll">Books</a></li>
-								<li> <a href="mags.html" class="smoothScroll">Magazines</a></li>
-								<li> <a href="faq.html" class="smoothScroll">FAQ</a></li>
-							</ul>
-						</div><!--/.nav-collapse -->
-					</div>
-					<div class="col-md-3">
-						<div class="social-icons">
-							<ul class="nav navbar-nav">
-								<li><a href="#" class="icon icon-facebook"></a></li>
-								<li><a href="#" class="icon icon-twitter"></a></li>
-								<li><a href="#" class="icon icon-google-plus"></a></li>
-								<li><a href="profile.php" class="icon icon-user"></a></li> <!--Will go to SEARCH BAR right end-->
-							</ul>
-						</div>
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-target="#navbarCollapse" data-toggle="collapse" >
+						
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#"><b><img src="assets/img/logo.png" width="25" alt="logo" /> &nbsp; Readers' Junction</b></a>
+				</div>
+				<div id="navbarCollapse" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li><a href="welcome.php" class="smoothScroll">Home</a></li>
+						<li> <a href="books.php" class="smoothScroll">Books</a></li>
+						<li> <a href="mags.php" class="smoothScroll">Magazines</a></li>
+						<li> <a href="index.php" class="smoothScroll">FAQ</a></li>
+					</ul>
+					<div class="navbar-header navbar-right">
+						<p class="navbar-text">
+							<a id="signup" href="#modal" name="signup" rel="leanModal">Log In </a>
+						</p>
 					</div>
 				</div>
-			</div>
+				</div>
+			</nav>
 		</div>
+			
+		<script type="text/javascript">
+		$('.navbar-collapse a').click(function(){
+		$(".navbar-collapse").collapse('hide');
+		});
+		</script>		
 		
 		<div class="flip-3d">
 				<figure>

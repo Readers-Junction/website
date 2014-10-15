@@ -12,11 +12,6 @@ a:hover, a:focus {
 
 			/* FOR FIRST WAY*/
 			
-img{
-padding-left: 60px;
-width:400px;
-}
-
 div.flip-3d {
 perspective: 1200px; width: 30%; float: left;
  margin-top: 100px;
@@ -31,7 +26,7 @@ font-size: 1.6rem;
 }
 
 div.flip-3d figure img {
-width: 400px; height: auto;
+width: 400px; height: auto; padding-left: 60px;
 }
 
 div.flip-3d figure figcaption {
@@ -55,51 +50,5 @@ transform: rotateX(90deg);
 background-image: radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0) 100%); 
 }
 
-
-
-				/* FOR SECOND WAY*/
-			
-#Way2{
-padding-top:20%;
-margin:10%;
-}			
-
-.booksBackground {
-	margin-left:5%;
-    background: url(../img/books.png) no-repeat;
-	max-height:300px;
-	max-width:400px;
-    border: 2px solid black;
-}
-
-.magsBackground {
-    margin-left:15%;
-	background: url(../img/mags.jpg) no-repeat;
-	max-height:300px;
-	max-width:400px;
-	border: 2px solid black;
-}
-
-.booksTransbox, .magsTransbox  {
-	width: 400px;
-	margin-top:240px;
-    height: 60px;
-	margin-left:-5%;
-	background-color: #ffffff;
-    border: 1px solid black;
-    opacity: 0.6;
-}
-
-.booksTransbox h2 {
-    font-weight: bold;
-    color: #000000;
-	text-align: center;	
-}
-
-.magsTransbox h2 {
-    font-weight: bold;
-    color: #000000;
-	text-align: center;
-}
 
 
